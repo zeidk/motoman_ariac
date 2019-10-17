@@ -5,19 +5,6 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>This kitting ontology models a kitting workstation including objects
-  in the workstation and data associated with the workstation. The
-  ontology assumes coordinate systems are right handed. For objects
-  such as parts vessels or a robot with a preferred orientation with
-  respect to gravity, the Z axis points up (opposite the pull of
-  gravity).</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>owlPrefix=ktw</Literal>
-    </Annotation>
     <Declaration>
         <Class IRI="#BoxVolume"/>
     </Declaration>
