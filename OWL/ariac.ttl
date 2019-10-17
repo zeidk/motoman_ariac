@@ -1,479 +1,479 @@
-@prefix : <http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#> .
+@prefix : <http://www.nist.gov/el/ontologies/kitting.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl> .
+@base <http://www.nist.gov/el/ontologies/kitting.owl> .
 
-<http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl> rdf:type owl:Ontology ;
-                                                                       rdfs:comment """This kitting ontology models a kitting workstation including objects
+<http://www.nist.gov/el/ontologies/kitting.owl> rdf:type owl:Ontology ;
+                                                 rdfs:comment """This kitting ontology models a kitting workstation including objects
   in the workstation and data associated with the workstation. The
   ontology assumes coordinate systems are right handed. For objects
   such as parts vessels or a robot with a preferred orientation with
   respect to gravity, the Z axis points up (opposite the pull of
   gravity).""" ,
-                                                                                    "owlPrefix=ktw" .
+                                                              "owlPrefix=ktw" .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByBase_EndEffectorChangingStation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByBase_EndEffectorChangingStation
 :hadByBase_EndEffectorChangingStation rdf:type owl:ObjectProperty ;
                                       owl:inverseOf :hasEndEffectorChangingStation_Base ;
                                       rdfs:range :EndEffectorChangingStation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByChangingStation_KittingWorkstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByChangingStation_KittingWorkstation
 :hadByChangingStation_KittingWorkstation rdf:type owl:ObjectProperty ;
                                          owl:inverseOf :hasKittingWorkstation_ChangingStation ;
                                          rdfs:domain :EndEffectorChangingStation ;
                                          rdfs:range :KittingWorkstation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByDesign_PartsTray
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByDesign_PartsTray
 :hadByDesign_PartsTray rdf:type owl:ObjectProperty ;
                        owl:inverseOf :hasPartsTray_Design ;
                        rdfs:domain :PartsTrayDesign ;
                        rdfs:range :PartsTray .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByEffectorAndGrasp_NoSkuObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByEffectorAndGrasp_NoSkuObject
 :hadByEffectorAndGrasp_NoSkuObject rdf:type owl:ObjectProperty ;
                                    owl:inverseOf :hasNoSkuObject_EffectorAndGrasp ;
                                    rdfs:domain :EndEffectorGrasp ;
                                    rdfs:range :NoSkuObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByEffectorAndGrasp_StockKeepingUnit
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByEffectorAndGrasp_StockKeepingUnit
 :hadByEffectorAndGrasp_StockKeepingUnit rdf:type owl:ObjectProperty ;
                                         owl:inverseOf :hasStockKeepingUnit_EffectorAndGrasp ;
                                         rdfs:domain :EndEffectorGrasp ;
                                         rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByEndEffectorHolder_EndEffectorChangingStation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByEndEffectorHolder_EndEffectorChangingStation
 :hadByEndEffectorHolder_EndEffectorChangingStation rdf:type owl:ObjectProperty ;
                                                    owl:inverseOf :hasEndEffectorChangingStation_EndEffectorHolder ;
                                                    rdfs:domain :EndEffectorHolder ;
                                                    rdfs:range :EndEffectorChangingStation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByEndEffector_EndEffectorHolder
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByEndEffector_EndEffectorHolder
 :hadByEndEffector_EndEffectorHolder rdf:type owl:ObjectProperty ;
                                     owl:inverseOf :hasEndEffectorHolder_EndEffector ;
                                     rdfs:domain :EndEffector ;
                                     rdfs:range :EndEffectorHolder .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByEndEffector_Robot
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByEndEffector_Robot
 :hadByEndEffector_Robot rdf:type owl:ObjectProperty ;
                         owl:inverseOf :hasRobot_EndEffector ;
                         rdfs:domain :EndEffector ;
                         rdfs:range :Robot .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByExternalShape_NoSkuObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByExternalShape_NoSkuObject
 :hadByExternalShape_NoSkuObject rdf:type owl:ObjectProperty ;
                                 owl:inverseOf :hasNoSkuObject_ExternalShape ;
                                 rdfs:domain :ExternalShape ;
                                 rdfs:range :NoSkuObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByExternalShape_StockKeepingUnit
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByExternalShape_StockKeepingUnit
 :hadByExternalShape_StockKeepingUnit rdf:type owl:ObjectProperty ;
                                      owl:inverseOf :hasStockKeepingUnit_ExternalShape ;
                                      rdfs:domain :ExternalShape ;
                                      rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose1_ThreeFingerGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose1_ThreeFingerGrasp
 :hadByGraspPose1_ThreeFingerGrasp rdf:type owl:ObjectProperty ;
                                   owl:inverseOf :hasThreeFingerGrasp_GraspPose1 ;
                                   rdfs:domain :PoseOnlyLocation ;
                                   rdfs:range :ThreeFingerGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose1_TwoJawsGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose1_TwoJawsGrasp
 :hadByGraspPose1_TwoJawsGrasp rdf:type owl:ObjectProperty ;
                               owl:inverseOf :hasTwoJawsGrasp_GraspPose1 ;
                               rdfs:domain :PoseOnlyLocation ;
                               rdfs:range :TwoJawsGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose2_ThreeFingerGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose2_ThreeFingerGrasp
 :hadByGraspPose2_ThreeFingerGrasp rdf:type owl:ObjectProperty ;
                                   owl:inverseOf :hasThreeFingerGrasp_GraspPose2 ;
                                   rdfs:domain :PoseOnlyLocation ;
                                   rdfs:range :ThreeFingerGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose2_TwoJawsGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose2_TwoJawsGrasp
 :hadByGraspPose2_TwoJawsGrasp rdf:type owl:ObjectProperty ;
                               owl:inverseOf :hasTwoJawsGrasp_GraspPose2 ;
                               rdfs:domain :PoseOnlyLocation ;
                               rdfs:range :TwoJawsGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose3_ThreeFingerGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose3_ThreeFingerGrasp
 :hadByGraspPose3_ThreeFingerGrasp rdf:type owl:ObjectProperty ;
                                   owl:inverseOf :hasThreeFingerGrasp_GraspPose3 ;
                                   rdfs:domain :PoseOnlyLocation ;
                                   rdfs:range :ThreeFingerGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose_OtherGripperGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose_OtherGripperGrasp
 :hadByGraspPose_OtherGripperGrasp rdf:type owl:ObjectProperty ;
                                   owl:inverseOf :hasOtherGripperGrasp_GraspPose ;
                                   rdfs:domain :PoseOnlyLocation ;
                                   rdfs:range :OtherGripperGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose_ParallelGripperGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose_ParallelGripperGrasp
 :hadByGraspPose_ParallelGripperGrasp rdf:type owl:ObjectProperty ;
                                      owl:inverseOf :hasParallelGripperGrasp_GraspPose ;
                                      rdfs:domain :PoseOnlyLocation ;
                                      rdfs:range :ParallelGripperGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByGraspPose_VacuumEffectorSingleGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByGraspPose_VacuumEffectorSingleGrasp
 :hadByGraspPose_VacuumEffectorSingleGrasp rdf:type owl:ObjectProperty ;
                                           owl:inverseOf :hasVacuumEffectorSingleGrasp_GraspPose ;
                                           rdfs:domain :PoseOnlyLocation ;
                                           rdfs:range :VacuumEffectorSingleGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByHeldObjectOffset_EndEffector
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByHeldObjectOffset_EndEffector
 :hadByHeldObjectOffset_EndEffector rdf:type owl:ObjectProperty ;
                                    owl:inverseOf :hasEndEffector_HeldObjectOffset ;
                                    rdfs:domain :PhysicalLocation ;
                                    rdfs:range :EndEffector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByHeldObject_EndEffector
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByHeldObject_EndEffector
 :hadByHeldObject_EndEffector rdf:type owl:ObjectProperty ;
                              owl:inverseOf :hasEndEffector_HeldObject ;
                              rdfs:domain :SolidObject ;
                              rdfs:range :EndEffector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByInternalShape_NoSkuObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByInternalShape_NoSkuObject
 :hadByInternalShape_NoSkuObject rdf:type owl:ObjectProperty ;
                                 owl:inverseOf :hasNoSkuObject_InternalShape ;
                                 rdfs:domain :InternalShape ;
                                 rdfs:range :NoSkuObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByInternalShape_StockKeepingUnit
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByInternalShape_StockKeepingUnit
 :hadByInternalShape_StockKeepingUnit rdf:type owl:ObjectProperty ;
                                      owl:inverseOf :hasStockKeepingUnit_InternalShape ;
                                      rdfs:domain :InternalShape ;
                                      rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByLargeContainer_LargeBoxWithEmptyVessels
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByLargeContainer_LargeBoxWithEmptyVessels
 :hadByLargeContainer_LargeBoxWithEmptyVessels rdf:type owl:ObjectProperty ;
                                               owl:inverseOf :hasLargeBoxWithEmptyVessels_LargeContainer ;
                                               rdfs:domain :LargeContainer ;
                                               rdfs:range :LargeBoxWithEmptyVessels .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByLargeContainer_LargeBoxWithPartsTrays
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByLargeContainer_LargeBoxWithPartsTrays
 :hadByLargeContainer_LargeBoxWithPartsTrays rdf:type owl:ObjectProperty ;
                                             owl:inverseOf :hasLargeBoxWithPartsTrays_LargeContainer ;
                                             rdfs:domain :LargeContainer ;
                                             rdfs:range :LargeBoxWithPartsTrays .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByMarkingLayout_Marking
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByMarkingLayout_Marking
 :hadByMarkingLayout_Marking rdf:type owl:ObjectProperty ;
                             owl:inverseOf :hasMarking_MarkingLayout ;
                             rdfs:domain :MarkingLayout ;
                             rdfs:range :Marking .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByMarkingModel_Marking
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByMarkingModel_Marking
 :hadByMarkingModel_Marking rdf:type owl:ObjectProperty ;
                            owl:inverseOf :hasMarking_MarkingModel ;
                            rdfs:domain :MarkingModel ;
                            rdfs:range :Marking .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByMarking_ShapeDesign
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByMarking_ShapeDesign
 :hadByMarking_ShapeDesign rdf:type owl:ObjectProperty ;
                           owl:inverseOf :hasShapeDesign_Marking ;
                           rdfs:domain :Marking ;
                           rdfs:range :ShapeDesign .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByMaximumPoint_BoxVolume
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByMaximumPoint_BoxVolume
 :hadByMaximumPoint_BoxVolume rdf:type owl:ObjectProperty ;
                              owl:inverseOf :hasBoxVolume_MaximumPoint ;
                              rdfs:domain :Point ;
                              rdfs:range :BoxVolume .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByMinimumPoint_BoxVolume
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByMinimumPoint_BoxVolume
 :hadByMinimumPoint_BoxVolume rdf:type owl:ObjectProperty ;
                              owl:inverseOf :hasBoxVolume_MinimumPoint ;
                              rdfs:domain :Point ;
                              rdfs:range :BoxVolume .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByObjectOnTable_WorkTable
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByObjectOnTable_WorkTable
 :hadByObjectOnTable_WorkTable rdf:type owl:ObjectProperty ;
                               owl:inverseOf :hasWorkTable_ObjectOnTable ;
                               rdfs:domain :SolidObject ;
                               rdfs:range :WorkTable .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByObject_KittingWorkstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByObject_KittingWorkstation
 :hadByObject_KittingWorkstation rdf:type owl:ObjectProperty ;
                                 owl:inverseOf :hasKittingWorkstation_Object ;
                                 rdfs:domain :SolidObject ;
                                 rdfs:range :KittingWorkstation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByOtherGripper_OtherGripperGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByOtherGripper_OtherGripperGrasp
 :hadByOtherGripper_OtherGripperGrasp rdf:type owl:ObjectProperty ;
                                      owl:inverseOf :hasOtherGripperGrasp_OtherGripper ;
                                      rdfs:domain :GripperOther ;
                                      rdfs:range :OtherGripperGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByOtherObstacle_KittingWorkstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByOtherObstacle_KittingWorkstation
 :hadByOtherObstacle_KittingWorkstation rdf:type owl:ObjectProperty ;
                                        owl:inverseOf :hasKittingWorkstation_OtherObstacle ;
                                        rdfs:domain :BoxVolume ;
                                        rdfs:range :KittingWorkstation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByParallelGripper_ParallelGripperGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByParallelGripper_ParallelGripperGrasp
 :hadByParallelGripper_ParallelGripperGrasp rdf:type owl:ObjectProperty ;
                                            owl:inverseOf :hasParallelGripperGrasp_ParallelGripper ;
                                            rdfs:domain :GripperParallel ;
                                            rdfs:range :ParallelGripperGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPartRefAndPose_PartsTrayDesign
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPartRefAndPose_PartsTrayDesign
 :hadByPartRefAndPose_PartsTrayDesign rdf:type owl:ObjectProperty ;
                                      owl:inverseOf :hasPartsTrayDesign_PartRefAndPose ;
                                      rdfs:domain :PartRefAndPose ;
                                      rdfs:range :PartsTrayDesign .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPartRefAndPose_Slot
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPartRefAndPose_Slot
 :hadByPartRefAndPose_Slot rdf:type owl:ObjectProperty ;
                           owl:inverseOf :hasSlot_PartRefAndPose ;
                           rdfs:domain :PartRefAndPose ;
                           rdfs:range :Slot .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPartSku_PartsBin
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPartSku_PartsBin
 :hadByPartSku_PartsBin rdf:type owl:ObjectProperty ;
                        owl:inverseOf :hasPartsBin_PartSku ;
                        rdfs:domain :StockKeepingUnit ;
                        rdfs:range :PartsBin .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPart_PartsVessel
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPart_PartsVessel
 :hadByPart_PartsVessel rdf:type owl:ObjectProperty ;
                        owl:inverseOf :hasPartsVessel_Part ;
                        rdfs:domain :Part ;
                        rdfs:range :PartsVessel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPart_Slot
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPart_Slot
 :hadByPart_Slot rdf:type owl:ObjectProperty ;
                 owl:inverseOf :hasSlot_Part ;
                 rdfs:domain :Part ;
                 rdfs:range :Slot .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPartsTrayDesign_KittingWorkstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPartsTrayDesign_KittingWorkstation
 :hadByPartsTrayDesign_KittingWorkstation rdf:type owl:ObjectProperty ;
                                          owl:inverseOf :hasKittingWorkstation_PartsTrayDesign ;
                                          rdfs:domain :PartsTrayDesign ;
                                          rdfs:range :KittingWorkstation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPartsTrayDesign_LargeBoxWithPartsTrays
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPartsTrayDesign_LargeBoxWithPartsTrays
 :hadByPartsTrayDesign_LargeBoxWithPartsTrays rdf:type owl:ObjectProperty ;
                                              owl:inverseOf :hasLargeBoxWithPartsTrays_PartsTrayDesign ;
                                              rdfs:domain :PartsTrayDesign ;
                                              rdfs:range :LargeBoxWithPartsTrays .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPartsTray_LargeBoxWithPartsTrays
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPartsTray_LargeBoxWithPartsTrays
 :hadByPartsTray_LargeBoxWithPartsTrays rdf:type owl:ObjectProperty ;
                                        owl:inverseOf :hasLargeBoxWithPartsTrays_PartsTray ;
                                        rdfs:domain :PartsTray ;
                                        rdfs:range :LargeBoxWithPartsTrays .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPoint_MarkingLayout
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPoint_MarkingLayout
 :hadByPoint_MarkingLayout rdf:type owl:ObjectProperty ;
                           owl:inverseOf :hasMarkingLayout_Point ;
                           rdfs:domain :Point ;
                           rdfs:range :MarkingLayout .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPoint_Pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPoint_Pose
 :hadByPoint_Pose rdf:type owl:ObjectProperty ;
                  owl:inverseOf :hasPose_Point ;
                  rdfs:domain :Point ;
                  rdfs:range :Pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPose_PartRefAndPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPose_PartRefAndPose
 :hadByPose_PartRefAndPose rdf:type owl:ObjectProperty ;
                           owl:inverseOf :hasPartRefAndPose_Pose ;
                           rdfs:domain :Pose ;
                           rdfs:range :PartRefAndPose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPose_PoseLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPose_PoseLocation
 :hadByPose_PoseLocation rdf:type owl:ObjectProperty ;
                         owl:inverseOf :hasPoseLocation_Pose ;
                         rdfs:domain :Pose ;
                         rdfs:range :PoseLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByPrimaryLocation_SolidObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByPrimaryLocation_SolidObject
 :hadByPrimaryLocation_SolidObject rdf:type owl:ObjectProperty ;
                                   owl:inverseOf :hasSolidObject_PrimaryLocation ;
                                   rdfs:domain :PhysicalLocation ;
                                   rdfs:range :SolidObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByRefObject_PhysicalLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByRefObject_PhysicalLocation
 :hadByRefObject_PhysicalLocation rdf:type owl:ObjectProperty ;
                                  owl:inverseOf :hasPhysicalLocation_RefObject ;
                                  rdfs:domain :SolidObject ;
                                  rdfs:range :PhysicalLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByRobot_KittingWorkstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByRobot_KittingWorkstation
 :hadByRobot_KittingWorkstation rdf:type owl:ObjectProperty ;
                                owl:inverseOf :hasKittingWorkstation_Robot ;
                                rdfs:domain :Robot ;
                                rdfs:range :KittingWorkstation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadBySecondaryLocation_SolidObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadBySecondaryLocation_SolidObject
 :hadBySecondaryLocation_SolidObject rdf:type owl:ObjectProperty ;
                                     owl:inverseOf :hasSolidObject_SecondaryLocation ;
                                     rdfs:domain :PhysicalLocation ;
                                     rdfs:range :SolidObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadBySku_KittingWorkstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadBySku_KittingWorkstation
 :hadBySku_KittingWorkstation rdf:type owl:ObjectProperty ;
                              owl:inverseOf :hasKittingWorkstation_Sku ;
                              rdfs:domain :StockKeepingUnit ;
                              rdfs:range :KittingWorkstation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadBySku_PartRefAndPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadBySku_PartRefAndPose
 :hadBySku_PartRefAndPose rdf:type owl:ObjectProperty ;
                          owl:inverseOf :hasPartRefAndPose_Sku ;
                          rdfs:domain :StockKeepingUnit ;
                          rdfs:range :PartRefAndPose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadBySku_SkuObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadBySku_SkuObject
 :hadBySku_SkuObject rdf:type owl:ObjectProperty ;
                     owl:inverseOf :hasSkuObject_Sku ;
                     rdfs:domain :StockKeepingUnit ;
                     rdfs:range :SkuObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadBySlot_PartsTray
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadBySlot_PartsTray
 :hadBySlot_PartsTray rdf:type owl:ObjectProperty ;
                      owl:inverseOf :hasPartsTray_Slot ;
                      rdfs:domain :Slot ;
                      rdfs:range :PartsTray .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByThreeFingerGripper_ThreeFingerGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByThreeFingerGripper_ThreeFingerGrasp
 :hadByThreeFingerGripper_ThreeFingerGrasp rdf:type owl:ObjectProperty ;
                                           owl:inverseOf :hasThreeFingerGrasp_ThreeFingerGripper ;
                                           rdfs:domain :GripperThreeFinger ;
                                           rdfs:range :ThreeFingerGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByTolerance_PoseOnlyLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByTolerance_PoseOnlyLocation
 :hadByTolerance_PoseOnlyLocation rdf:type owl:ObjectProperty ;
                                  owl:inverseOf :hasPoseOnlyLocation_Tolerance ;
                                  rdfs:domain :PoseTolerance ;
                                  rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByTwoJawsGripper_TwoJawsGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByTwoJawsGripper_TwoJawsGrasp
 :hadByTwoJawsGripper_TwoJawsGrasp rdf:type owl:ObjectProperty ;
                                   owl:inverseOf :hasTwoJawsGrasp_TwoJawsGripper ;
                                   rdfs:domain :GripperTwoJaws ;
                                   rdfs:range :TwoJawsGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByVacuumEffectorSingle_VacuumEffectorSingleGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByVacuumEffectorSingle_VacuumEffectorSingleGrasp
 :hadByVacuumEffectorSingle_VacuumEffectorSingleGrasp rdf:type owl:ObjectProperty ;
                                                      owl:inverseOf :hasVacuumEffectorSingleGrasp_VacuumEffectorSingle ;
                                                      rdfs:domain :VacuumEffectorSingleCup ;
                                                      rdfs:range :VacuumEffectorSingleGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByVesselSku_PartsTrayDesign
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByVesselSku_PartsTrayDesign
 :hadByVesselSku_PartsTrayDesign rdf:type owl:ObjectProperty ;
                                 owl:inverseOf :hasPartsTrayDesign_VesselSku ;
                                 rdfs:domain :StockKeepingUnit ;
                                 rdfs:range :PartsTrayDesign .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByVessel_LargeBoxWithEmptyVessels
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByVessel_LargeBoxWithEmptyVessels
 :hadByVessel_LargeBoxWithEmptyVessels rdf:type owl:ObjectProperty ;
                                       owl:inverseOf :hasLargeBoxWithEmptyVessels_Vessel ;
                                       rdfs:domain :PartsVessel ;
                                       rdfs:range :LargeBoxWithEmptyVessels .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByWorkVolume_Robot
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByWorkVolume_Robot
 :hadByWorkVolume_Robot rdf:type owl:ObjectProperty ;
                        owl:inverseOf :hasRobot_WorkVolume ;
                        rdfs:domain :BoxVolume ;
                        rdfs:range :Robot .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByXAxis_MarkingLayout
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByXAxis_MarkingLayout
 :hadByXAxis_MarkingLayout rdf:type owl:ObjectProperty ;
                           owl:inverseOf :hasMarkingLayout_XAxis ;
                           rdfs:domain :Vector ;
                           rdfs:range :MarkingLayout .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByXAxis_Pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByXAxis_Pose
 :hadByXAxis_Pose rdf:type owl:ObjectProperty ;
                  owl:inverseOf :hasPose_XAxis ;
                  rdfs:domain :Vector ;
                  rdfs:range :Pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByYAxis_MarkingLayout
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByYAxis_MarkingLayout
 :hadByYAxis_MarkingLayout rdf:type owl:ObjectProperty ;
                           owl:inverseOf :hasMarkingLayout_YAxis ;
                           rdfs:domain :Vector ;
                           rdfs:range :MarkingLayout .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hadByZAxis_Pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hadByZAxis_Pose
 :hadByZAxis_Pose rdf:type owl:ObjectProperty ;
                  owl:inverseOf :hasPose_ZAxis ;
                  rdfs:domain :Vector ;
                  rdfs:range :Pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasBoxVolume_MaximumPoint
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasBoxVolume_MaximumPoint
 :hasBoxVolume_MaximumPoint rdf:type owl:ObjectProperty ,
                                     owl:FunctionalProperty ,
                                     owl:InverseFunctionalProperty ;
@@ -481,7 +481,7 @@
                            rdfs:range :Point .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasBoxVolume_MinimumPoint
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasBoxVolume_MinimumPoint
 :hasBoxVolume_MinimumPoint rdf:type owl:ObjectProperty ,
                                     owl:FunctionalProperty ,
                                     owl:InverseFunctionalProperty ;
@@ -489,21 +489,21 @@
                            rdfs:range :Point .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffectorChangingStation_Base
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffectorChangingStation_Base
 :hasEndEffectorChangingStation_Base rdf:type owl:ObjectProperty ,
                                              owl:FunctionalProperty ,
                                              owl:InverseFunctionalProperty ;
                                     rdfs:domain :EndEffectorChangingStation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffectorChangingStation_EndEffectorHolder
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffectorChangingStation_EndEffectorHolder
 :hasEndEffectorChangingStation_EndEffectorHolder rdf:type owl:ObjectProperty ,
                                                           owl:InverseFunctionalProperty ;
                                                  rdfs:domain :EndEffectorChangingStation ;
                                                  rdfs:range :EndEffectorHolder .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffectorHolder_EndEffector
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffectorHolder_EndEffector
 :hasEndEffectorHolder_EndEffector rdf:type owl:ObjectProperty ,
                                            owl:FunctionalProperty ,
                                            owl:InverseFunctionalProperty ;
@@ -511,7 +511,7 @@
                                   rdfs:range :EndEffector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffector_HeldObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffector_HeldObject
 :hasEndEffector_HeldObject rdf:type owl:ObjectProperty ,
                                     owl:FunctionalProperty ,
                                     owl:InverseFunctionalProperty ;
@@ -519,7 +519,7 @@
                            rdfs:range :SolidObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffector_HeldObjectOffset
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffector_HeldObjectOffset
 :hasEndEffector_HeldObjectOffset rdf:type owl:ObjectProperty ,
                                           owl:FunctionalProperty ,
                                           owl:InverseFunctionalProperty ;
@@ -527,7 +527,7 @@
                                  rdfs:range :PhysicalLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_ChangingStation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_ChangingStation
 :hasKittingWorkstation_ChangingStation rdf:type owl:ObjectProperty ,
                                                 owl:FunctionalProperty ,
                                                 owl:InverseFunctionalProperty ;
@@ -535,42 +535,42 @@
                                        rdfs:range :EndEffectorChangingStation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_Object
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_Object
 :hasKittingWorkstation_Object rdf:type owl:ObjectProperty ,
                                        owl:InverseFunctionalProperty ;
                               rdfs:domain :KittingWorkstation ;
                               rdfs:range :SolidObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_OtherObstacle
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_OtherObstacle
 :hasKittingWorkstation_OtherObstacle rdf:type owl:ObjectProperty ,
                                               owl:InverseFunctionalProperty ;
                                      rdfs:domain :KittingWorkstation ;
                                      rdfs:range :BoxVolume .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_PartsTrayDesign
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_PartsTrayDesign
 :hasKittingWorkstation_PartsTrayDesign rdf:type owl:ObjectProperty ,
                                                 owl:InverseFunctionalProperty ;
                                        rdfs:domain :KittingWorkstation ;
                                        rdfs:range :PartsTrayDesign .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_Robot
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_Robot
 :hasKittingWorkstation_Robot rdf:type owl:ObjectProperty ,
                                       owl:InverseFunctionalProperty ;
                              rdfs:domain :KittingWorkstation ;
                              rdfs:range :Robot .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_Sku
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_Sku
 :hasKittingWorkstation_Sku rdf:type owl:ObjectProperty ,
                                     owl:InverseFunctionalProperty ;
                            rdfs:domain :KittingWorkstation ;
                            rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasLargeBoxWithEmptyVessels_LargeContainer
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasLargeBoxWithEmptyVessels_LargeContainer
 :hasLargeBoxWithEmptyVessels_LargeContainer rdf:type owl:ObjectProperty ,
                                                      owl:FunctionalProperty ,
                                                      owl:InverseFunctionalProperty ;
@@ -578,14 +578,14 @@
                                             rdfs:range :LargeContainer .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasLargeBoxWithEmptyVessels_Vessel
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasLargeBoxWithEmptyVessels_Vessel
 :hasLargeBoxWithEmptyVessels_Vessel rdf:type owl:ObjectProperty ,
                                              owl:InverseFunctionalProperty ;
                                     rdfs:domain :LargeBoxWithEmptyVessels ;
                                     rdfs:range :PartsVessel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasLargeBoxWithPartsTrays_LargeContainer
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasLargeBoxWithPartsTrays_LargeContainer
 :hasLargeBoxWithPartsTrays_LargeContainer rdf:type owl:ObjectProperty ,
                                                    owl:FunctionalProperty ,
                                                    owl:InverseFunctionalProperty ;
@@ -593,21 +593,21 @@
                                           rdfs:range :LargeContainer .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasLargeBoxWithPartsTrays_PartsTray
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasLargeBoxWithPartsTrays_PartsTray
 :hasLargeBoxWithPartsTrays_PartsTray rdf:type owl:ObjectProperty ,
                                               owl:InverseFunctionalProperty ;
                                      rdfs:domain :LargeBoxWithPartsTrays ;
                                      rdfs:range :PartsTray .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasLargeBoxWithPartsTrays_PartsTrayDesign
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasLargeBoxWithPartsTrays_PartsTrayDesign
 :hasLargeBoxWithPartsTrays_PartsTrayDesign rdf:type owl:ObjectProperty ,
                                                     owl:FunctionalProperty ;
                                            rdfs:domain :LargeBoxWithPartsTrays ;
                                            rdfs:range :PartsTrayDesign .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarkingLayout_Point
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarkingLayout_Point
 :hasMarkingLayout_Point rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ,
                                  owl:InverseFunctionalProperty ;
@@ -615,7 +615,7 @@
                         rdfs:range :Point .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarkingLayout_XAxis
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarkingLayout_XAxis
 :hasMarkingLayout_XAxis rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ,
                                  owl:InverseFunctionalProperty ;
@@ -623,7 +623,7 @@
                         rdfs:range :Vector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarkingLayout_YAxis
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarkingLayout_YAxis
 :hasMarkingLayout_YAxis rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ,
                                  owl:InverseFunctionalProperty ;
@@ -631,7 +631,7 @@
                         rdfs:range :Vector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarking_MarkingLayout
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarking_MarkingLayout
 :hasMarking_MarkingLayout rdf:type owl:ObjectProperty ,
                                    owl:FunctionalProperty ,
                                    owl:InverseFunctionalProperty ;
@@ -639,7 +639,7 @@
                           rdfs:range :MarkingLayout .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarking_MarkingModel
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarking_MarkingModel
 :hasMarking_MarkingModel rdf:type owl:ObjectProperty ,
                                   owl:FunctionalProperty ,
                                   owl:InverseFunctionalProperty ;
@@ -647,14 +647,14 @@
                          rdfs:range :MarkingModel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasNoSkuObject_EffectorAndGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasNoSkuObject_EffectorAndGrasp
 :hasNoSkuObject_EffectorAndGrasp rdf:type owl:ObjectProperty ,
                                           owl:InverseFunctionalProperty ;
                                  rdfs:domain :NoSkuObject ;
                                  rdfs:range :EndEffectorGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasNoSkuObject_ExternalShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasNoSkuObject_ExternalShape
 :hasNoSkuObject_ExternalShape rdf:type owl:ObjectProperty ,
                                        owl:FunctionalProperty ,
                                        owl:InverseFunctionalProperty ;
@@ -662,7 +662,7 @@
                               rdfs:range :ExternalShape .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasNoSkuObject_InternalShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasNoSkuObject_InternalShape
 :hasNoSkuObject_InternalShape rdf:type owl:ObjectProperty ,
                                        owl:FunctionalProperty ,
                                        owl:InverseFunctionalProperty ;
@@ -670,21 +670,21 @@
                               rdfs:range :InternalShape .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasOtherGripperGrasp_GraspPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasOtherGripperGrasp_GraspPose
 :hasOtherGripperGrasp_GraspPose rdf:type owl:ObjectProperty ,
                                          owl:InverseFunctionalProperty ;
                                 rdfs:domain :OtherGripperGrasp ;
                                 rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasOtherGripperGrasp_OtherGripper
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasOtherGripperGrasp_OtherGripper
 :hasOtherGripperGrasp_OtherGripper rdf:type owl:ObjectProperty ,
                                             owl:FunctionalProperty ;
                                    rdfs:domain :OtherGripperGrasp ;
                                    rdfs:range :GripperOther .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasParallelGripperGrasp_GraspPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasParallelGripperGrasp_GraspPose
 :hasParallelGripperGrasp_GraspPose rdf:type owl:ObjectProperty ,
                                             owl:FunctionalProperty ,
                                             owl:InverseFunctionalProperty ;
@@ -692,14 +692,14 @@
                                    rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasParallelGripperGrasp_ParallelGripper
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasParallelGripperGrasp_ParallelGripper
 :hasParallelGripperGrasp_ParallelGripper rdf:type owl:ObjectProperty ,
                                                   owl:FunctionalProperty ;
                                          rdfs:domain :ParallelGripperGrasp ;
                                          rdfs:range :GripperParallel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartRefAndPose_Pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartRefAndPose_Pose
 :hasPartRefAndPose_Pose rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ,
                                  owl:InverseFunctionalProperty ;
@@ -707,63 +707,63 @@
                         rdfs:range :Pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartRefAndPose_Sku
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartRefAndPose_Sku
 :hasPartRefAndPose_Sku rdf:type owl:ObjectProperty ,
                                 owl:FunctionalProperty ;
                        rdfs:domain :PartRefAndPose ;
                        rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsBin_PartSku
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsBin_PartSku
 :hasPartsBin_PartSku rdf:type owl:ObjectProperty ,
                               owl:FunctionalProperty ;
                      rdfs:domain :PartsBin ;
                      rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsTrayDesign_PartRefAndPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsTrayDesign_PartRefAndPose
 :hasPartsTrayDesign_PartRefAndPose rdf:type owl:ObjectProperty ,
                                             owl:InverseFunctionalProperty ;
                                    rdfs:domain :PartsTrayDesign ;
                                    rdfs:range :PartRefAndPose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsTrayDesign_VesselSku
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsTrayDesign_VesselSku
 :hasPartsTrayDesign_VesselSku rdf:type owl:ObjectProperty ,
                                        owl:FunctionalProperty ;
                               rdfs:domain :PartsTrayDesign ;
                               rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsTray_Design
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsTray_Design
 :hasPartsTray_Design rdf:type owl:ObjectProperty ,
                               owl:FunctionalProperty ;
                      rdfs:domain :PartsTray ;
                      rdfs:range :PartsTrayDesign .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsTray_Slot
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsTray_Slot
 :hasPartsTray_Slot rdf:type owl:ObjectProperty ,
                             owl:InverseFunctionalProperty ;
                    rdfs:domain :PartsTray ;
                    rdfs:range :Slot .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsVessel_Part
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsVessel_Part
 :hasPartsVessel_Part rdf:type owl:ObjectProperty ,
                               owl:InverseFunctionalProperty ;
                      rdfs:domain :PartsVessel ;
                      rdfs:range :Part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPhysicalLocation_RefObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPhysicalLocation_RefObject
 :hasPhysicalLocation_RefObject rdf:type owl:ObjectProperty ,
                                         owl:FunctionalProperty ;
                                rdfs:domain :PhysicalLocation ;
                                rdfs:range :SolidObject .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseLocation_Pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseLocation_Pose
 :hasPoseLocation_Pose rdf:type owl:ObjectProperty ,
                                owl:FunctionalProperty ,
                                owl:InverseFunctionalProperty ;
@@ -771,7 +771,7 @@
                       rdfs:range :Pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseOnlyLocation_Tolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseOnlyLocation_Tolerance
 :hasPoseOnlyLocation_Tolerance rdf:type owl:ObjectProperty ,
                                         owl:FunctionalProperty ,
                                         owl:InverseFunctionalProperty ;
@@ -779,7 +779,7 @@
                                rdfs:range :PoseTolerance .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPose_Point
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPose_Point
 :hasPose_Point rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ,
                         owl:InverseFunctionalProperty ;
@@ -787,7 +787,7 @@
                rdfs:range :Point .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPose_XAxis
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPose_XAxis
 :hasPose_XAxis rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ,
                         owl:InverseFunctionalProperty ;
@@ -795,7 +795,7 @@
                rdfs:range :Vector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPose_ZAxis
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPose_ZAxis
 :hasPose_ZAxis rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ,
                         owl:InverseFunctionalProperty ;
@@ -803,7 +803,7 @@
                rdfs:range :Vector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasRobot_EndEffector
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasRobot_EndEffector
 :hasRobot_EndEffector rdf:type owl:ObjectProperty ,
                                owl:FunctionalProperty ,
                                owl:InverseFunctionalProperty ;
@@ -811,42 +811,42 @@
                       rdfs:range :EndEffector .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasRobot_WorkVolume
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasRobot_WorkVolume
 :hasRobot_WorkVolume rdf:type owl:ObjectProperty ,
                               owl:InverseFunctionalProperty ;
                      rdfs:domain :Robot ;
                      rdfs:range :BoxVolume .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasShapeDesign_Marking
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasShapeDesign_Marking
 :hasShapeDesign_Marking rdf:type owl:ObjectProperty ,
                                  owl:InverseFunctionalProperty ;
                         rdfs:domain :ShapeDesign ;
                         rdfs:range :Marking .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasSkuObject_Sku
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasSkuObject_Sku
 :hasSkuObject_Sku rdf:type owl:ObjectProperty ,
                            owl:FunctionalProperty ;
                   rdfs:domain :SkuObject ;
                   rdfs:range :StockKeepingUnit .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasSlot_Part
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasSlot_Part
 :hasSlot_Part rdf:type owl:ObjectProperty ,
                        owl:FunctionalProperty ;
               rdfs:domain :Slot ;
               rdfs:range :Part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasSlot_PartRefAndPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasSlot_PartRefAndPose
 :hasSlot_PartRefAndPose rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ;
                         rdfs:domain :Slot ;
                         rdfs:range :PartRefAndPose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasSolidObject_PrimaryLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasSolidObject_PrimaryLocation
 :hasSolidObject_PrimaryLocation rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ,
                                          owl:InverseFunctionalProperty ;
@@ -854,21 +854,21 @@
                                 rdfs:range :PhysicalLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasSolidObject_SecondaryLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasSolidObject_SecondaryLocation
 :hasSolidObject_SecondaryLocation rdf:type owl:ObjectProperty ,
                                            owl:InverseFunctionalProperty ;
                                   rdfs:domain :SolidObject ;
                                   rdfs:range :PhysicalLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasStockKeepingUnit_EffectorAndGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasStockKeepingUnit_EffectorAndGrasp
 :hasStockKeepingUnit_EffectorAndGrasp rdf:type owl:ObjectProperty ,
                                                owl:InverseFunctionalProperty ;
                                       rdfs:domain :StockKeepingUnit ;
                                       rdfs:range :EndEffectorGrasp .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasStockKeepingUnit_ExternalShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasStockKeepingUnit_ExternalShape
 :hasStockKeepingUnit_ExternalShape rdf:type owl:ObjectProperty ,
                                             owl:FunctionalProperty ,
                                             owl:InverseFunctionalProperty ;
@@ -876,7 +876,7 @@
                                    rdfs:range :ExternalShape .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasStockKeepingUnit_InternalShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasStockKeepingUnit_InternalShape
 :hasStockKeepingUnit_InternalShape rdf:type owl:ObjectProperty ,
                                             owl:FunctionalProperty ,
                                             owl:InverseFunctionalProperty ;
@@ -884,7 +884,7 @@
                                    rdfs:range :InternalShape .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasThreeFingerGrasp_GraspPose1
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasThreeFingerGrasp_GraspPose1
 :hasThreeFingerGrasp_GraspPose1 rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ,
                                          owl:InverseFunctionalProperty ;
@@ -892,7 +892,7 @@
                                 rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasThreeFingerGrasp_GraspPose2
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasThreeFingerGrasp_GraspPose2
 :hasThreeFingerGrasp_GraspPose2 rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ,
                                          owl:InverseFunctionalProperty ;
@@ -900,7 +900,7 @@
                                 rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasThreeFingerGrasp_GraspPose3
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasThreeFingerGrasp_GraspPose3
 :hasThreeFingerGrasp_GraspPose3 rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ,
                                          owl:InverseFunctionalProperty ;
@@ -908,14 +908,14 @@
                                 rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasThreeFingerGrasp_ThreeFingerGripper
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasThreeFingerGrasp_ThreeFingerGripper
 :hasThreeFingerGrasp_ThreeFingerGripper rdf:type owl:ObjectProperty ,
                                                  owl:FunctionalProperty ;
                                         rdfs:domain :ThreeFingerGrasp ;
                                         rdfs:range :GripperThreeFinger .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasTwoJawsGrasp_GraspPose1
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasTwoJawsGrasp_GraspPose1
 :hasTwoJawsGrasp_GraspPose1 rdf:type owl:ObjectProperty ,
                                      owl:FunctionalProperty ,
                                      owl:InverseFunctionalProperty ;
@@ -923,7 +923,7 @@
                             rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasTwoJawsGrasp_GraspPose2
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasTwoJawsGrasp_GraspPose2
 :hasTwoJawsGrasp_GraspPose2 rdf:type owl:ObjectProperty ,
                                      owl:FunctionalProperty ,
                                      owl:InverseFunctionalProperty ;
@@ -931,14 +931,14 @@
                             rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasTwoJawsGrasp_TwoJawsGripper
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasTwoJawsGrasp_TwoJawsGripper
 :hasTwoJawsGrasp_TwoJawsGripper rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ;
                                 rdfs:domain :TwoJawsGrasp ;
                                 rdfs:range :GripperTwoJaws .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVacuumEffectorSingleGrasp_GraspPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVacuumEffectorSingleGrasp_GraspPose
 :hasVacuumEffectorSingleGrasp_GraspPose rdf:type owl:ObjectProperty ,
                                                  owl:FunctionalProperty ,
                                                  owl:InverseFunctionalProperty ;
@@ -946,14 +946,14 @@
                                         rdfs:range :PoseOnlyLocation .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVacuumEffectorSingleGrasp_VacuumEffectorSingle
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVacuumEffectorSingleGrasp_VacuumEffectorSingle
 :hasVacuumEffectorSingleGrasp_VacuumEffectorSingle rdf:type owl:ObjectProperty ,
                                                             owl:FunctionalProperty ;
                                                    rdfs:domain :VacuumEffectorSingleGrasp ;
                                                    rdfs:range :VacuumEffectorSingleCup .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasWorkTable_ObjectOnTable
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasWorkTable_ObjectOnTable
 :hasWorkTable_ObjectOnTable rdf:type owl:ObjectProperty ,
                                      owl:InverseFunctionalProperty ;
                             rdfs:domain :WorkTable ;
@@ -964,453 +964,453 @@
 #    Data properties
 #################################################################
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasBoxyShape_HasTop
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasBoxyShape_HasTop
 :hasBoxyShape_HasTop rdf:type owl:DatatypeProperty ,
                               owl:FunctionalProperty ;
                      rdfs:domain :BoxyShape ;
                      rdfs:range xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasBoxyShape_Height
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasBoxyShape_Height
 :hasBoxyShape_Height rdf:type owl:DatatypeProperty ,
                               owl:FunctionalProperty ;
                      rdfs:domain :BoxyShape ;
                      rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasBoxyShape_Length
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasBoxyShape_Length
 :hasBoxyShape_Length rdf:type owl:DatatypeProperty ,
                               owl:FunctionalProperty ;
                      rdfs:domain :BoxyShape ;
                      rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasBoxyShape_Width
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasBoxyShape_Width
 :hasBoxyShape_Width rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
                     rdfs:domain :BoxyShape ;
                     rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasCylindricalShape_Diameter
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasCylindricalShape_Diameter
 :hasCylindricalShape_Diameter rdf:type owl:DatatypeProperty ,
                                        owl:FunctionalProperty ;
                               rdfs:domain :CylindricalShape ;
                               rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasCylindricalShape_HasTop
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasCylindricalShape_HasTop
 :hasCylindricalShape_HasTop rdf:type owl:DatatypeProperty ,
                                      owl:FunctionalProperty ;
                             rdfs:domain :CylindricalShape ;
                             rdfs:range xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasCylindricalShape_Height
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasCylindricalShape_Height
 :hasCylindricalShape_Height rdf:type owl:DatatypeProperty ,
                                      owl:FunctionalProperty ;
                             rdfs:domain :CylindricalShape ;
                             rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffectorHolder_EndEffectorSlot
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffectorHolder_EndEffectorSlot
 :hasEndEffectorHolder_EndEffectorSlot rdf:type owl:DatatypeProperty ,
                                                owl:FunctionalProperty ;
                                       rdfs:domain :EndEffectorHolder ;
                                       rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffector_Description
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffector_Description
 :hasEndEffector_Description rdf:type owl:DatatypeProperty ,
                                      owl:FunctionalProperty ;
                             rdfs:domain :EndEffector ;
                             rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasEndEffector_MaximumLoadWeight
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasEndEffector_MaximumLoadWeight
 :hasEndEffector_MaximumLoadWeight rdf:type owl:DatatypeProperty ,
                                            owl:FunctionalProperty ;
                                   rdfs:domain :EndEffector ;
                                   rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasExternalShape_ModelFileName
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasExternalShape_ModelFileName
 :hasExternalShape_ModelFileName rdf:type owl:DatatypeProperty ,
                                          owl:FunctionalProperty ;
                                 rdfs:domain :ExternalShape ;
                                 rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasExternalShape_ModelFormatName
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasExternalShape_ModelFormatName
 :hasExternalShape_ModelFormatName rdf:type owl:DatatypeProperty ,
                                            owl:FunctionalProperty ;
                                   rdfs:domain :ExternalShape ;
                                   rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasExternalShape_ModelName
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasExternalShape_ModelName
 :hasExternalShape_ModelName rdf:type owl:DatatypeProperty ,
                                      owl:FunctionalProperty ;
                             rdfs:domain :ExternalShape ;
                             rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasGripperEffector_MaxGripWidth
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasGripperEffector_MaxGripWidth
 :hasGripperEffector_MaxGripWidth rdf:type owl:DatatypeProperty ,
                                           owl:FunctionalProperty ;
                                  rdfs:domain :GripperEffector ;
                                  rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_AngleUnit
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_AngleUnit
 :hasKittingWorkstation_AngleUnit rdf:type owl:DatatypeProperty ,
                                           owl:FunctionalProperty ;
                                  rdfs:domain :KittingWorkstation ;
                                  rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_LengthUnit
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_LengthUnit
 :hasKittingWorkstation_LengthUnit rdf:type owl:DatatypeProperty ,
                                            owl:FunctionalProperty ;
                                   rdfs:domain :KittingWorkstation ;
                                   rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasKittingWorkstation_WeightUnit
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasKittingWorkstation_WeightUnit
 :hasKittingWorkstation_WeightUnit rdf:type owl:DatatypeProperty ,
                                            owl:FunctionalProperty ;
                                   rdfs:domain :KittingWorkstation ;
                                   rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasLargeBoxWithPartsTrays_Capacity
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasLargeBoxWithPartsTrays_Capacity
 :hasLargeBoxWithPartsTrays_Capacity rdf:type owl:DatatypeProperty ,
                                              owl:FunctionalProperty ;
                                     rdfs:domain :LargeBoxWithPartsTrays ;
                                     rdfs:range xsd:positiveInteger .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasLargeContainer_SerialNumber
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasLargeContainer_SerialNumber
 :hasLargeContainer_SerialNumber rdf:type owl:DatatypeProperty ,
                                          owl:FunctionalProperty ;
                                 rdfs:domain :LargeContainer ;
                                 rdfs:range xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarkingModel_MarkingFileName
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarkingModel_MarkingFileName
 :hasMarkingModel_MarkingFileName rdf:type owl:DatatypeProperty ,
                                           owl:FunctionalProperty ;
                                  rdfs:domain :MarkingModel ;
                                  rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarkingModel_MarkingFormatName
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarkingModel_MarkingFormatName
 :hasMarkingModel_MarkingFormatName rdf:type owl:DatatypeProperty ,
                                             owl:FunctionalProperty ;
                                    rdfs:domain :MarkingModel ;
                                    rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasMarkingModel_MarkingName
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasMarkingModel_MarkingName
 :hasMarkingModel_MarkingName rdf:type owl:DatatypeProperty ,
                                       owl:FunctionalProperty ;
                              rdfs:domain :MarkingModel ;
                              rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasNoSkuObject_Weight
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasNoSkuObject_Weight
 :hasNoSkuObject_Weight rdf:type owl:DatatypeProperty ,
                                 owl:FunctionalProperty ;
                        rdfs:domain :NoSkuObject ;
                        rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasOtherGripperGrasp_MaxForce
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasOtherGripperGrasp_MaxForce
 :hasOtherGripperGrasp_MaxForce rdf:type owl:DatatypeProperty ,
                                         owl:FunctionalProperty ;
                                rdfs:domain :OtherGripperGrasp ;
                                rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasOtherGripperGrasp_MinForce
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasOtherGripperGrasp_MinForce
 :hasOtherGripperGrasp_MinForce rdf:type owl:DatatypeProperty ,
                                         owl:FunctionalProperty ;
                                rdfs:domain :OtherGripperGrasp ;
                                rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasParallelGripperGrasp_ApproachSeparation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasParallelGripperGrasp_ApproachSeparation
 :hasParallelGripperGrasp_ApproachSeparation rdf:type owl:DatatypeProperty ,
                                                      owl:FunctionalProperty ;
                                             rdfs:domain :ParallelGripperGrasp ;
                                             rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasParallelGripperGrasp_GraspSeparation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasParallelGripperGrasp_GraspSeparation
 :hasParallelGripperGrasp_GraspSeparation rdf:type owl:DatatypeProperty ,
                                                   owl:FunctionalProperty ;
                                          rdfs:domain :ParallelGripperGrasp ;
                                          rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPart_SerialNumber
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPart_SerialNumber
 :hasPart_SerialNumber rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
                       rdfs:domain :Part ;
                       rdfs:range xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsBin_PartQuantity
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsBin_PartQuantity
 :hasPartsBin_PartQuantity rdf:type owl:DatatypeProperty ,
                                    owl:FunctionalProperty ;
                           rdfs:domain :PartsBin ;
                           rdfs:range xsd:nonNegativeInteger .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsTray_Complete
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsTray_Complete
 :hasPartsTray_Complete rdf:type owl:DatatypeProperty ,
                                 owl:FunctionalProperty ;
                        rdfs:domain :PartsTray ;
                        rdfs:range xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsVessel_SerialNumber
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsVessel_SerialNumber
 :hasPartsVessel_SerialNumber rdf:type owl:DatatypeProperty ,
                                       owl:FunctionalProperty ;
                              rdfs:domain :PartsVessel ;
                              rdfs:range xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPartsVessel_Weight
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPartsVessel_Weight
 :hasPartsVessel_Weight rdf:type owl:DatatypeProperty ,
                                 owl:FunctionalProperty ;
                        rdfs:domain :PartsVessel ;
                        rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPhysicalLocation_Timestamp
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPhysicalLocation_Timestamp
 :hasPhysicalLocation_Timestamp rdf:type owl:DatatypeProperty ,
                                         owl:FunctionalProperty ;
                                rdfs:domain :PhysicalLocation ;
                                rdfs:range xsd:dateTime .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoint_X
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoint_X
 :hasPoint_X rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain :Point ;
             rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoint_Y
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoint_Y
 :hasPoint_Y rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain :Point ;
             rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoint_Z
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoint_Z
 :hasPoint_Z rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain :Point ;
             rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPolygon2D_X
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPolygon2D_X
 :hasPolygon2D_X rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Polygon2D ;
                 rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPolygon2D_Y
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPolygon2D_Y
 :hasPolygon2D_Y rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Polygon2D ;
                 rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseLocation_OrientationStandardDeviation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseLocation_OrientationStandardDeviation
 :hasPoseLocation_OrientationStandardDeviation rdf:type owl:DatatypeProperty ,
                                                        owl:FunctionalProperty ;
                                               rdfs:domain :PoseLocation ;
                                               rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseLocation_PositionStandardDeviation
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseLocation_PositionStandardDeviation
 :hasPoseLocation_PositionStandardDeviation rdf:type owl:DatatypeProperty ,
                                                     owl:FunctionalProperty ;
                                            rdfs:domain :PoseLocation ;
                                            rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseTolerance_XAxisTolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseTolerance_XAxisTolerance
 :hasPoseTolerance_XAxisTolerance rdf:type owl:DatatypeProperty ,
                                           owl:FunctionalProperty ;
                                  rdfs:domain :PoseTolerance ;
                                  rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseTolerance_XPointTolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseTolerance_XPointTolerance
 :hasPoseTolerance_XPointTolerance rdf:type owl:DatatypeProperty ,
                                            owl:FunctionalProperty ;
                                   rdfs:domain :PoseTolerance ;
                                   rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseTolerance_YPointTolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseTolerance_YPointTolerance
 :hasPoseTolerance_YPointTolerance rdf:type owl:DatatypeProperty ,
                                            owl:FunctionalProperty ;
                                   rdfs:domain :PoseTolerance ;
                                   rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseTolerance_ZAxisTolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseTolerance_ZAxisTolerance
 :hasPoseTolerance_ZAxisTolerance rdf:type owl:DatatypeProperty ,
                                           owl:FunctionalProperty ;
                                  rdfs:domain :PoseTolerance ;
                                  rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasPoseTolerance_ZPointTolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasPoseTolerance_ZPointTolerance
 :hasPoseTolerance_ZPointTolerance rdf:type owl:DatatypeProperty ,
                                            owl:FunctionalProperty ;
                                   rdfs:domain :PoseTolerance ;
                                   rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasRelativeLocationIn_Description
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasRelativeLocationIn_Description
 :hasRelativeLocationIn_Description rdf:type owl:DatatypeProperty ,
                                             owl:FunctionalProperty ;
                                    rdfs:domain :RelativeLocationIn ;
                                    rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasRelativeLocationOn_Description
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasRelativeLocationOn_Description
 :hasRelativeLocationOn_Description rdf:type owl:DatatypeProperty ,
                                             owl:FunctionalProperty ;
                                    rdfs:domain :RelativeLocationOn ;
                                    rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasRobot_Description
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasRobot_Description
 :hasRobot_Description rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
                       rdfs:domain :Robot ;
                       rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasRobot_MaximumLoadWeight
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasRobot_MaximumLoadWeight
 :hasRobot_MaximumLoadWeight rdf:type owl:DatatypeProperty ,
                                      owl:FunctionalProperty ;
                             rdfs:domain :Robot ;
                             rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasShapeDesign_Description
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasShapeDesign_Description
 :hasShapeDesign_Description rdf:type owl:DatatypeProperty ,
                                      owl:FunctionalProperty ;
                             rdfs:domain :ShapeDesign ;
                             rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasSlot_ID
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasSlot_ID
 :hasSlot_ID rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain :Slot ;
             rdfs:range xsd:integer .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasSlot_IsOccupied
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasSlot_IsOccupied
 :hasSlot_IsOccupied rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
                     rdfs:domain :Slot ;
                     rdfs:range xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasStockKeepingUnit_Description
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasStockKeepingUnit_Description
 :hasStockKeepingUnit_Description rdf:type owl:DatatypeProperty ,
                                           owl:FunctionalProperty ;
                                  rdfs:domain :StockKeepingUnit ;
                                  rdfs:range xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasStockKeepingUnit_Weight
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasStockKeepingUnit_Weight
 :hasStockKeepingUnit_Weight rdf:type owl:DatatypeProperty ,
                                      owl:FunctionalProperty ;
                             rdfs:domain :StockKeepingUnit ;
                             rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasThreeFingerGrasp_MaxForce
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasThreeFingerGrasp_MaxForce
 :hasThreeFingerGrasp_MaxForce rdf:type owl:DatatypeProperty ,
                                        owl:FunctionalProperty ;
                               rdfs:domain :ThreeFingerGrasp ;
                               rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasThreeFingerGrasp_MinForce
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasThreeFingerGrasp_MinForce
 :hasThreeFingerGrasp_MinForce rdf:type owl:DatatypeProperty ,
                                        owl:FunctionalProperty ;
                               rdfs:domain :ThreeFingerGrasp ;
                               rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasTwoJawsGrasp_MaxForce
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasTwoJawsGrasp_MaxForce
 :hasTwoJawsGrasp_MaxForce rdf:type owl:DatatypeProperty ,
                                    owl:FunctionalProperty ;
                           rdfs:domain :TwoJawsGrasp ;
                           rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasTwoJawsGrasp_MinForce
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasTwoJawsGrasp_MinForce
 :hasTwoJawsGrasp_MinForce rdf:type owl:DatatypeProperty ,
                                    owl:FunctionalProperty ;
                           rdfs:domain :TwoJawsGrasp ;
                           rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVacuumEffectorMultiCup_ArrayNumber
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVacuumEffectorMultiCup_ArrayNumber
 :hasVacuumEffectorMultiCup_ArrayNumber rdf:type owl:DatatypeProperty ,
                                                 owl:FunctionalProperty ;
                                        rdfs:domain :VacuumEffectorMultiCup ;
                                        rdfs:range xsd:positiveInteger .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVacuumEffectorMultiCup_ArrayRadius
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVacuumEffectorMultiCup_ArrayRadius
 :hasVacuumEffectorMultiCup_ArrayRadius rdf:type owl:DatatypeProperty ,
                                                 owl:FunctionalProperty ;
                                        rdfs:domain :VacuumEffectorMultiCup ;
                                        rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVacuumEffector_CupDiameter
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVacuumEffector_CupDiameter
 :hasVacuumEffector_CupDiameter rdf:type owl:DatatypeProperty ,
                                         owl:FunctionalProperty ;
                                rdfs:domain :VacuumEffector ;
                                rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVacuumEffector_Length
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVacuumEffector_Length
 :hasVacuumEffector_Length rdf:type owl:DatatypeProperty ,
                                    owl:FunctionalProperty ;
                           rdfs:domain :VacuumEffector ;
                           rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVector_I
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVector_I
 :hasVector_I rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :Vector ;
              rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVector_J
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVector_J
 :hasVector_J rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :Vector ;
              rdfs:range xsd:decimal .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#hasVector_K
+###  http://www.nist.gov/el/ontologies/kitting.owl#hasVector_K
 :hasVector_K rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :Vector ;
@@ -1421,7 +1421,7 @@
 #    Classes
 #################################################################
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#BoxVolume
+###  http://www.nist.gov/el/ontologies/kitting.owl#BoxVolume
 :BoxVolume rdf:type owl:Class ;
            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasBoxVolume_MaximumPoint ;
@@ -1458,7 +1458,7 @@
   MaximumPoint has the maximum values of X, Y, and Z.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#BoxyShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#BoxyShape
 :BoxyShape rdf:type owl:Class ;
            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasBoxyShape_HasTop ;
@@ -1492,7 +1492,7 @@
   is closed. If HasTop is false, the box has no top.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#CylindricalShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#CylindricalShape
 :CylindricalShape rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                owl:onProperty :hasCylindricalShape_HasTop ;
@@ -1526,7 +1526,7 @@
   exists and is closed. If HasTop is false, the cylinder has no top.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#DataThing
+###  http://www.nist.gov/el/ontologies/kitting.owl#DataThing
 :DataThing rdf:type owl:Class ;
            owl:disjointWith :SolidObject ;
            owl:disjointUnionOf ( :BoxVolume
@@ -1553,7 +1553,7 @@
   as Vector, PhysicalLocation, etc.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#EndEffector
+###  http://www.nist.gov/el/ontologies/kitting.owl#EndEffector
 :EndEffector rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasEndEffector_HeldObjectOffset ;
@@ -1603,7 +1603,7 @@
   EndEffectorHolder at an EndEffectorChangingStation.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#EndEffectorChangingStation
+###  http://www.nist.gov/el/ontologies/kitting.owl#EndEffectorChangingStation
 :EndEffectorChangingStation rdf:type owl:Class ;
                             rdfs:subClassOf :NoSkuObject ;
                             rdfs:comment """EndEffectorChangingStation is derived from NoSkuObject.
@@ -1626,7 +1626,7 @@
   the Base and the EndEffectorHolders and their relative positions.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#EndEffectorGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#EndEffectorGrasp
 :EndEffectorGrasp rdf:type owl:Class ;
                   rdfs:subClassOf :DataThing ;
                   owl:disjointUnionOf ( :OtherGripperGrasp
@@ -1644,7 +1644,7 @@
   types: VacuumEffectorSingleGrasp""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#EndEffectorHolder
+###  http://www.nist.gov/el/ontologies/kitting.owl#EndEffectorHolder
 :EndEffectorHolder rdf:type owl:Class ;
                    owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                 owl:onProperty :hasEndEffectorHolder_EndEffectorSlot ;
@@ -1673,7 +1673,7 @@
   EndEffector is an effector that is in this holder.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#ExternalShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#ExternalShape
 :ExternalShape rdf:type owl:Class ;
                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasExternalShape_ModelFileName ;
@@ -1716,7 +1716,7 @@
   if the model file contains more than one model.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#GripperEffector
+###  http://www.nist.gov/el/ontologies/kitting.owl#GripperEffector
 :GripperEffector rdf:type owl:Class ;
                  rdfs:subClassOf :EndEffector ;
                  owl:disjointUnionOf ( :GripperOther
@@ -1742,7 +1742,7 @@
   between two parallel planes that the gripper can grasp.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#GripperOther
+###  http://www.nist.gov/el/ontologies/kitting.owl#GripperOther
 :GripperOther rdf:type owl:Class ;
               rdfs:subClassOf :GripperEffector ;
               rdfs:comment """GripperOther is derived from GripperEffector.
@@ -1762,7 +1762,7 @@
   types.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#GripperParallel
+###  http://www.nist.gov/el/ontologies/kitting.owl#GripperParallel
 :GripperParallel rdf:type owl:Class ;
                  rdfs:subClassOf :GripperEffector ;
                  rdfs:comment """GripperParallel is derived from GripperEffector.
@@ -1782,7 +1782,7 @@
   parallel plates.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#GripperThreeFinger
+###  http://www.nist.gov/el/ontologies/kitting.owl#GripperThreeFinger
 :GripperThreeFinger rdf:type owl:Class ;
                     rdfs:subClassOf :GripperEffector ;
                     rdfs:comment """GripperThreeFinger is derived from GripperEffector.
@@ -1802,7 +1802,7 @@
   it with three fingers.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#GripperTwoJaws
+###  http://www.nist.gov/el/ontologies/kitting.owl#GripperTwoJaws
 :GripperTwoJaws rdf:type owl:Class ;
                 rdfs:subClassOf :GripperEffector ;
                 rdfs:comment """GripperTwoJaws is derived from GripperEffector.
@@ -1821,7 +1821,7 @@
   A GripperTwoJaws holds an object by gripping it with two jaws.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Human
+###  http://www.nist.gov/el/ontologies/kitting.owl#Human
 :Human rdf:type owl:Class ;
        rdfs:subClassOf :NoSkuObject ;
        rdfs:comment """Human is derived from NoSkuObject.
@@ -1838,7 +1838,7 @@
   that encloses the human completely.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#InternalShape
+###  http://www.nist.gov/el/ontologies/kitting.owl#InternalShape
 :InternalShape rdf:type owl:Class ;
                rdfs:subClassOf :ShapeDesign ;
                owl:disjointUnionOf ( :BoxyShape
@@ -1855,7 +1855,7 @@
   shape without referring to another file.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#KittingWorkstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#KittingWorkstation
 :KittingWorkstation rdf:type owl:Class ;
                     rdfs:subClassOf :NoSkuObject ;
                     rdfs:comment """KittingWorkstation is derived from NoSkuObject.
@@ -1902,7 +1902,7 @@
   relative to itself in order to end the chain of relative locations.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#LargeBoxWithEmptyVessels
+###  http://www.nist.gov/el/ontologies/kitting.owl#LargeBoxWithEmptyVessels
 :LargeBoxWithEmptyVessels rdf:type owl:Class ;
                           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :hasLargeBoxWithEmptyVessels_LargeContainer ;
@@ -1937,7 +1937,7 @@
   SKU, although there is currently no formal requirement for that.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#LargeBoxWithPartsTrays
+###  http://www.nist.gov/el/ontologies/kitting.owl#LargeBoxWithPartsTrays
 :LargeBoxWithPartsTrays rdf:type owl:Class ;
                         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :hasLargeBoxWithPartsTrays_LargeContainer ;
@@ -2002,7 +2002,7 @@
   named design.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#LargeContainer
+###  http://www.nist.gov/el/ontologies/kitting.owl#LargeContainer
 :LargeContainer rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                              owl:onProperty :hasLargeContainer_SerialNumber ;
@@ -2031,7 +2031,7 @@
   of parts vessel or kit.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Marking
+###  http://www.nist.gov/el/ontologies/kitting.owl#Marking
 :Marking rdf:type owl:Class ;
          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                       owl:onProperty :hasMarking_MarkingLayout ;
@@ -2066,7 +2066,7 @@
   the MarkingModel.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#MarkingLayout
+###  http://www.nist.gov/el/ontologies/kitting.owl#MarkingLayout
 :MarkingLayout rdf:type owl:Class ;
                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasMarkingLayout_Point ;
@@ -2115,7 +2115,7 @@
   markings along those axes.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#MarkingModel
+###  http://www.nist.gov/el/ontologies/kitting.owl#MarkingModel
 :MarkingModel rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasMarkingModel_MarkingFileName ;
@@ -2151,7 +2151,7 @@
   file contains multiple markings.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#NoSkuObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#NoSkuObject
 :NoSkuObject rdf:type owl:Class ;
              rdfs:subClassOf :SolidObject ;
              rdfs:comment """NoSkuObject is derived from SolidObject.
@@ -2174,7 +2174,7 @@
   of the object is the coordinate system of the root component.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#OtherGripperGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#OtherGripperGrasp
 :OtherGripperGrasp rdf:type owl:Class ;
                    owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                 owl:onProperty :hasOtherGripperGrasp_OtherGripper ;
@@ -2213,7 +2213,7 @@
   object. Force is measured in Newtons.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#ParallelGripperGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#ParallelGripperGrasp
 :ParallelGripperGrasp rdf:type owl:Class ;
                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasParallelGripperGrasp_GraspPose ;
@@ -2259,7 +2259,7 @@
   Separations are measured in mm.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Part
+###  http://www.nist.gov/el/ontologies/kitting.owl#Part
 :Part rdf:type owl:Class ;
       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasPart_SerialNumber ;
@@ -2287,7 +2287,7 @@
   The Sku specifies the SKU for the part.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PartRefAndPose
+###  http://www.nist.gov/el/ontologies/kitting.owl#PartRefAndPose
 :PartRefAndPose rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                              owl:onProperty :hasPartRefAndPose_Pose ;
@@ -2323,7 +2323,7 @@
   PartRefAndPose belongs.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PartsBin
+###  http://www.nist.gov/el/ontologies/kitting.owl#PartsBin
 :PartsBin rdf:type owl:Class ;
           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasPartsBin_PartSku ;
@@ -2367,7 +2367,7 @@
   value of PartQuantity should be the number of instances of Part.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PartsTray
+###  http://www.nist.gov/el/ontologies/kitting.owl#PartsTray
 :PartsTray rdf:type owl:Class ;
            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasPartsTray_Design ;
@@ -2422,7 +2422,7 @@
   slot).""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PartsTrayDesign
+###  http://www.nist.gov/el/ontologies/kitting.owl#PartsTrayDesign
 :PartsTrayDesign rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                               owl:onProperty :hasPartsTrayDesign_VesselSku ;
@@ -2446,7 +2446,7 @@
   the coordinate system of the ShapeDesign of the parts vessel.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PartsVessel
+###  http://www.nist.gov/el/ontologies/kitting.owl#PartsVessel
 :PartsVessel rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasPartsVessel_SerialNumber ;
@@ -2481,7 +2481,7 @@
   the parts currently in the vessel.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PhysicalLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#PhysicalLocation
 :PhysicalLocation rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                owl:onProperty :hasPhysicalLocation_RefObject ;
@@ -2510,7 +2510,7 @@
   most recent date and time when the location was updated.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Point
+###  http://www.nist.gov/el/ontologies/kitting.owl#Point
 :Point rdf:type owl:Class ;
        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasPoint_X ;
@@ -2555,7 +2555,7 @@
   X, Y, and Z are the Cartesian coordinates of the Point.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Polygon2D
+###  http://www.nist.gov/el/ontologies/kitting.owl#Polygon2D
 :Polygon2D rdf:type owl:Class ;
            rdfs:subClassOf :DataThing ;
            rdfs:comment """Polygon2D is derived from DataThing.
@@ -2572,7 +2572,7 @@
   self-intersecting.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#Pose
 :Pose rdf:type owl:Class ;
       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasPose_Point ;
@@ -2620,7 +2620,7 @@
   coordinate system.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PoseLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#PoseLocation
 :PoseLocation rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasPoseLocation_Pose ;
@@ -2669,7 +2669,7 @@
   being used.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PoseLocationIn
+###  http://www.nist.gov/el/ontologies/kitting.owl#PoseLocationIn
 :PoseLocationIn rdf:type owl:Class ;
                 rdfs:subClassOf :PoseLocation ;
                 rdfs:comment """PoseLocationIn is derived from PoseLocation.
@@ -2684,7 +2684,7 @@
   more precise.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PoseLocationOn
+###  http://www.nist.gov/el/ontologies/kitting.owl#PoseLocationOn
 :PoseLocationOn rdf:type owl:Class ;
                 rdfs:subClassOf :PoseLocation ;
                 rdfs:comment """PoseLocationOn is derived from PoseLocation.
@@ -2700,7 +2700,7 @@
   made more precise.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PoseOnlyLocation
+###  http://www.nist.gov/el/ontologies/kitting.owl#PoseOnlyLocation
 :PoseOnlyLocation rdf:type owl:Class ;
                   rdfs:subClassOf :PoseLocation ;
                   rdfs:comment """PoseOnlyLocation is derived from PoseLocation.
@@ -2717,7 +2717,7 @@
   PoseOnlyLocation.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#PoseTolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#PoseTolerance
 :PoseTolerance rdf:type owl:Class ;
                rdfs:subClassOf :DataThing ;
                rdfs:comment """PoseTolerance is derived from DataThing. 
@@ -2740,7 +2740,7 @@
   similar. All five tolerances must be satisfied at the same instant.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#RelativeLocationIn
+###  http://www.nist.gov/el/ontologies/kitting.owl#RelativeLocationIn
 :RelativeLocationIn rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasRelativeLocationIn_Description ;
@@ -2765,7 +2765,7 @@
   'in' is vague and might be made more precise.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#RelativeLocationOn
+###  http://www.nist.gov/el/ontologies/kitting.owl#RelativeLocationOn
 :RelativeLocationOn rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasRelativeLocationOn_Description ;
@@ -2790,7 +2790,7 @@
   notion of 'on top of' is vague and might be made more precise.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Robot
+###  http://www.nist.gov/el/ontologies/kitting.owl#Robot
 :Robot rdf:type owl:Class ;
        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasRobot_Description ;
@@ -2824,7 +2824,7 @@
   etc.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#ShapeDesign
+###  http://www.nist.gov/el/ontologies/kitting.owl#ShapeDesign
 :ShapeDesign rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasShapeDesign_Description ;
@@ -2853,7 +2853,7 @@
   system. A shape may have zero to many markings on it.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#SkuObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#SkuObject
 :SkuObject rdf:type owl:Class ;
            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasSkuObject_Sku ;
@@ -2884,7 +2884,7 @@
   grasps that can handle the object.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Slot
+###  http://www.nist.gov/el/ontologies/kitting.owl#Slot
 :Slot rdf:type owl:Class ;
       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasSlot_PartRefAndPose ;
@@ -2939,7 +2939,7 @@
   empty.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#SolidObject
+###  http://www.nist.gov/el/ontologies/kitting.owl#SolidObject
 :SolidObject rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasSolidObject_PrimaryLocation ;
@@ -2969,7 +2969,7 @@
   Workstation.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#StockKeepingUnit
+###  http://www.nist.gov/el/ontologies/kitting.owl#StockKeepingUnit
 :StockKeepingUnit rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                owl:onProperty :hasStockKeepingUnit_Description ;
@@ -3001,7 +3001,7 @@
   optionally, the pose or poses that end effector should use.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#ThreeFingerGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#ThreeFingerGrasp
 :ThreeFingerGrasp rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                owl:onProperty :hasThreeFingerGrasp_ThreeFingerGripper ;
@@ -3041,7 +3041,7 @@
   order to lift the object. Force is measured in Newtons.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#TwoJawsGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#TwoJawsGrasp
 :TwoJawsGrasp rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasTwoJawsGrasp_TwoJawsGripper ;
@@ -3079,7 +3079,7 @@
   the object. Force is measured in Newtons.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#VacuumEffector
+###  http://www.nist.gov/el/ontologies/kitting.owl#VacuumEffector
 :VacuumEffector rdf:type owl:Class ;
                 rdfs:subClassOf :EndEffector ;
                 owl:disjointUnionOf ( :VacuumEffectorMultiCup
@@ -3104,7 +3104,7 @@
   a vacuum.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#VacuumEffectorMultiCup
+###  http://www.nist.gov/el/ontologies/kitting.owl#VacuumEffectorMultiCup
 :VacuumEffectorMultiCup rdf:type owl:Class ;
                         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :hasVacuumEffectorMultiCup_ArrayNumber ;
@@ -3147,7 +3147,7 @@
   array.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#VacuumEffectorSingleCup
+###  http://www.nist.gov/el/ontologies/kitting.owl#VacuumEffectorSingleCup
 :VacuumEffectorSingleCup rdf:type owl:Class ;
                          rdfs:subClassOf :VacuumEffector ;
                          rdfs:comment """VacuumEffectorSingleCup is derived from VacuumEffector. An
@@ -3169,7 +3169,7 @@
   of the VacuumEffector is measured along that axis.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#VacuumEffectorSingleGrasp
+###  http://www.nist.gov/el/ontologies/kitting.owl#VacuumEffectorSingleGrasp
 :VacuumEffectorSingleGrasp rdf:type owl:Class ;
                            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                         owl:onProperty :hasVacuumEffectorSingleGrasp_VacuumEffectorSingle ;
@@ -3202,7 +3202,7 @@
   object. The GraspPose should not use the optional Timestamp.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#Vector
+###  http://www.nist.gov/el/ontologies/kitting.owl#Vector
 :Vector rdf:type owl:Class ;
         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                      owl:onProperty :hasVector_I ;
@@ -3248,7 +3248,7 @@
   vector.""" .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#WorkTable
+###  http://www.nist.gov/el/ontologies/kitting.owl#WorkTable
 :WorkTable rdf:type owl:Class ;
            rdfs:subClassOf :NoSkuObject ;
            rdfs:comment """WorkTable is derived from NoSkuObject.
@@ -3272,31 +3272,31 @@
 #    Individuals
 #################################################################
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#design_gasket_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#design_gasket_tray
 :design_gasket_tray rdf:type owl:NamedIndividual ,
                              :PartsTrayDesign ;
                     :hasPartsTrayDesign_VesselSku :sku_gasket_vessel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#design_gear_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#design_gear_tray
 :design_gear_tray rdf:type owl:NamedIndividual ,
                            :PartsTrayDesign ;
                   :hasPartsTrayDesign_VesselSku :sku_gear_vessel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#design_kit_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#design_kit_tray
 :design_kit_tray rdf:type owl:NamedIndividual ,
                           :PartsTrayDesign ;
                  :hasPartsTrayDesign_VesselSku :sku_kit_vessel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#design_piston_rod_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#design_piston_rod_tray
 :design_piston_rod_tray rdf:type owl:NamedIndividual ,
                                  :PartsTrayDesign ;
                         :hasPartsTrayDesign_VesselSku :sku_piston_rod_vessel .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_part_shape
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_part_shape
 :gasket_part_shape rdf:type owl:NamedIndividual ,
                             :ExternalShape ;
                    :hasExternalShape_ModelFileName "gasket_part"^^xsd:string ;
@@ -3304,7 +3304,7 @@
                    :hasShapeDesign_Description "Shape of gasket parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray
 :gasket_tray rdf:type owl:NamedIndividual ,
                       :PartsTray ;
              :hasPartsTray_Design :design_gasket_tray ;
@@ -3314,14 +3314,14 @@
              :hasPartsVessel_SerialNumber "GasketTray"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_location
 :gasket_tray_location rdf:type owl:NamedIndividual ,
                                :PoseLocationOn ;
                       :hasPhysicalLocation_RefObject :optical_table ;
                       :hasPoseLocation_Pose :gasket_tray_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_point
 :gasket_tray_point rdf:type owl:NamedIndividual ,
                             :Point ;
                    :hasPoint_X 0.0 ;
@@ -3329,7 +3329,7 @@
                    :hasPoint_Z 0.0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_pose
 :gasket_tray_pose rdf:type owl:NamedIndividual ,
                            :Pose ;
                   :hasPose_Point :gasket_tray_point ;
@@ -3337,7 +3337,7 @@
                   :hasPose_ZAxis :gasket_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_shape
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_shape
 :gasket_tray_shape rdf:type owl:NamedIndividual ,
                             :BoxyShape ;
                    :hasBoxyShape_HasTop "false"^^xsd:boolean ;
@@ -3347,7 +3347,7 @@
                    :hasShapeDesign_Description "Shape for trays that hold gasket parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_slot_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_slot_1
 :gasket_tray_slot_1 rdf:type owl:NamedIndividual ,
                              :Slot ;
                     :hasSlot_Part :part_gasket_1 ;
@@ -3356,7 +3356,7 @@
                     :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_slot_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_slot_2
 :gasket_tray_slot_2 rdf:type owl:NamedIndividual ,
                              :Slot ;
                     :hasSlot_Part :part_gasket_2 ;
@@ -3365,7 +3365,7 @@
                     :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_slot_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_slot_3
 :gasket_tray_slot_3 rdf:type owl:NamedIndividual ,
                              :Slot ;
                     :hasSlot_Part :part_gasket_3 ;
@@ -3374,7 +3374,7 @@
                     :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_slot_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_slot_4
 :gasket_tray_slot_4 rdf:type owl:NamedIndividual ,
                              :Slot ;
                     :hasSlot_Part :part_gasket_4 ;
@@ -3383,7 +3383,7 @@
                     :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_x_axis
 :gasket_tray_x_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 1 ;
@@ -3391,7 +3391,7 @@
                     :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gasket_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#gasket_tray_z_axis
 :gasket_tray_z_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 0 ;
@@ -3399,7 +3399,7 @@
                     :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_part_shape
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_part_shape
 :gear_part_shape rdf:type owl:NamedIndividual ,
                           :CylindricalShape ;
                  :hasCylindricalShape_Diameter 3 ;
@@ -3408,7 +3408,7 @@
                  :hasShapeDesign_Description "Shape of gear parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray
 :gear_tray rdf:type owl:NamedIndividual ,
                     :PartsTray ;
            :hasPartsTray_Design :design_gear_tray ;
@@ -3418,14 +3418,14 @@
            :hasPartsVessel_SerialNumber "GearTray"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_location
 :gear_tray_location rdf:type owl:NamedIndividual ,
                              :PoseLocationOn ;
                     :hasPhysicalLocation_RefObject :optical_table ;
                     :hasPoseLocation_Pose :gear_tray_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_point
 :gear_tray_point rdf:type owl:NamedIndividual ,
                           :Point ;
                  :hasPoint_X 0.0 ;
@@ -3433,7 +3433,7 @@
                  :hasPoint_Z 0.0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_pose
 :gear_tray_pose rdf:type owl:NamedIndividual ,
                          :Pose ;
                 :hasPose_Point :gear_tray_point ;
@@ -3441,7 +3441,7 @@
                 :hasPose_ZAxis :gear_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_shape
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_shape
 :gear_tray_shape rdf:type owl:NamedIndividual ,
                           :BoxyShape ;
                  :hasBoxyShape_HasTop "false"^^xsd:boolean ;
@@ -3451,7 +3451,7 @@
                  :hasShapeDesign_Description "Shape for trays that hold gear parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_slot_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_slot_1
 :gear_tray_slot_1 rdf:type owl:NamedIndividual ,
                            :Slot ;
                   :hasSlot_Part :part_gear_1 ;
@@ -3460,7 +3460,7 @@
                   :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_slot_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_slot_2
 :gear_tray_slot_2 rdf:type owl:NamedIndividual ,
                            :Slot ;
                   :hasSlot_Part :part_gear_2 ;
@@ -3469,7 +3469,7 @@
                   :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_slot_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_slot_3
 :gear_tray_slot_3 rdf:type owl:NamedIndividual ,
                            :Slot ;
                   :hasSlot_Part :part_gear_3 ;
@@ -3478,7 +3478,7 @@
                   :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_slot_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_slot_4
 :gear_tray_slot_4 rdf:type owl:NamedIndividual ,
                            :Slot ;
                   :hasSlot_Part :part_gear_4 ;
@@ -3487,7 +3487,7 @@
                   :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_x_axis
 :gear_tray_x_axis rdf:type owl:NamedIndividual ,
                            :Vector ;
                   :hasVector_I 1 ;
@@ -3495,7 +3495,7 @@
                   :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#gear_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#gear_tray_z_axis
 :gear_tray_z_axis rdf:type owl:NamedIndividual ,
                            :Vector ;
                   :hasVector_I 0 ;
@@ -3503,7 +3503,7 @@
                   :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#kit_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#kit_tray
 :kit_tray rdf:type owl:NamedIndividual ,
                    :PartsTray ;
           :hasPartsTray_Design :design_kit_tray ;
@@ -3513,14 +3513,14 @@
           :hasPartsVessel_SerialNumber "KitTray"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#kit_tray_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#kit_tray_location
 :kit_tray_location rdf:type owl:NamedIndividual ,
                             :PoseLocationOn ;
                    :hasPhysicalLocation_RefObject :optical_table ;
                    :hasPoseLocation_Pose :kit_tray_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#kit_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#kit_tray_point
 :kit_tray_point rdf:type owl:NamedIndividual ,
                          :Point ;
                 :hasPoint_X 0.0 ;
@@ -3528,7 +3528,7 @@
                 :hasPoint_Z 0.0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#kit_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#kit_tray_pose
 :kit_tray_pose rdf:type owl:NamedIndividual ,
                         :Pose ;
                :hasPose_Point :kit_tray_point ;
@@ -3536,7 +3536,7 @@
                :hasPose_ZAxis :kit_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#kit_tray_shape
+###  http://www.nist.gov/el/ontologies/kitting.owl#kit_tray_shape
 :kit_tray_shape rdf:type owl:NamedIndividual ,
                          :BoxyShape ;
                 :hasBoxyShape_HasTop "false"^^xsd:boolean ;
@@ -3546,7 +3546,7 @@
                 :hasShapeDesign_Description "Shape of tray for kits"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#kit_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#kit_tray_x_axis
 :kit_tray_x_axis rdf:type owl:NamedIndividual ,
                           :Vector ;
                  :hasVector_I 1 ;
@@ -3554,7 +3554,7 @@
                  :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#kit_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#kit_tray_z_axis
 :kit_tray_z_axis rdf:type owl:NamedIndividual ,
                           :Vector ;
                  :hasVector_I 0 ;
@@ -3562,14 +3562,14 @@
                  :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#motoman_box_volume_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#motoman_box_volume_1
 :motoman_box_volume_1 rdf:type owl:NamedIndividual ,
                                :BoxVolume ;
                       :hasBoxVolume_MaximumPoint :motoman_max_point ;
                       :hasBoxVolume_MinimumPoint :motoman_min_point .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#motoman_max_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#motoman_max_point
 :motoman_max_point rdf:type owl:NamedIndividual ,
                             :Point ;
                    :hasPoint_X 1.0414 ;
@@ -3577,7 +3577,7 @@
                    :hasPoint_Z 0.0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#motoman_min_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#motoman_min_point
 :motoman_min_point rdf:type owl:NamedIndividual ,
                             :Point ;
                    :hasPoint_X 0 ;
@@ -3585,7 +3585,7 @@
                    :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#motoman_workstation
+###  http://www.nist.gov/el/ontologies/kitting.owl#motoman_workstation
 :motoman_workstation rdf:type owl:NamedIndividual ,
                               :KittingWorkstation ;
                      :hasSolidObject_PrimaryLocation :relative_location_in_1 ;
@@ -3594,20 +3594,20 @@
                      :hasKittingWorkstation_WeightUnit "kilogram"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#optical_table
+###  http://www.nist.gov/el/ontologies/kitting.owl#optical_table
 :optical_table rdf:type owl:NamedIndividual ,
                         :WorkTable ;
                :hasSolidObject_PrimaryLocation :optical_table_location .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#optical_table_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#optical_table_location
 :optical_table_location rdf:type owl:NamedIndividual ,
                                  :PoseOnlyLocation ;
                         :hasPhysicalLocation_RefObject :optical_table ;
                         :hasPoseLocation_Pose :optical_table_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#optical_table_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#optical_table_point
 :optical_table_point rdf:type owl:NamedIndividual ,
                               :Point ;
                      :hasPoint_X 0.0 ;
@@ -3615,7 +3615,7 @@
                      :hasPoint_Z 0.0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#optical_table_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#optical_table_pose
 :optical_table_pose rdf:type owl:NamedIndividual ,
                              :Pose ;
                     :hasPose_Point :optical_table_point ;
@@ -3623,7 +3623,7 @@
                     :hasPose_ZAxis :optical_table_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#optical_table_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#optical_table_x_axis
 :optical_table_x_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 1 ;
@@ -3631,7 +3631,7 @@
                       :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#optical_table_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#optical_table_z_axis
 :optical_table_z_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 0 ;
@@ -3639,7 +3639,7 @@
                       :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1
 :part_gasket_1 rdf:type owl:NamedIndividual ,
                         :Part ;
                :hasSkuObject_Sku :sku_gasket_part ;
@@ -3647,7 +3647,7 @@
                :hasPart_SerialNumber "1"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_in_tray_point
 :part_gasket_1_in_tray_point rdf:type owl:NamedIndividual ,
                                       :Point ;
                              :hasPoint_X 0 ;
@@ -3655,7 +3655,7 @@
                              :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_in_tray_pose
 :part_gasket_1_in_tray_pose rdf:type owl:NamedIndividual ,
                                      :Pose ;
                             :hasPose_Point :part_gasket_1_in_tray_point ;
@@ -3663,7 +3663,7 @@
                             :hasPose_ZAxis :part_gasket_1_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_in_tray_x_axis
 :part_gasket_1_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 1 ;
@@ -3671,7 +3671,7 @@
                               :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_in_tray_z_axis
 :part_gasket_1_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 0 ;
@@ -3679,14 +3679,14 @@
                               :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_location
 :part_gasket_1_location rdf:type owl:NamedIndividual ,
                                  :PoseLocationIn ;
                         :hasPhysicalLocation_RefObject :motoman_workstation ;
                         :hasPoseLocation_Pose :part_gasket_1_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_point
 :part_gasket_1_point rdf:type owl:NamedIndividual ,
                               :Point ;
                      :hasPoint_X 0 ;
@@ -3694,7 +3694,7 @@
                      :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_pose
 :part_gasket_1_pose rdf:type owl:NamedIndividual ,
                              :Pose ;
                     :hasPose_Point :part_gasket_1_point ;
@@ -3702,7 +3702,7 @@
                     :hasPose_ZAxis :part_gasket_1_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_x_axis
 :part_gasket_1_x_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 1 ;
@@ -3710,7 +3710,7 @@
                       :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_1_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_1_z_axis
 :part_gasket_1_z_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 0 ;
@@ -3718,7 +3718,7 @@
                       :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2
 :part_gasket_2 rdf:type owl:NamedIndividual ,
                         :Part ;
                :hasSkuObject_Sku :sku_gasket_part ;
@@ -3726,7 +3726,7 @@
                :hasPart_SerialNumber "2"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_in_tray_point
 :part_gasket_2_in_tray_point rdf:type owl:NamedIndividual ,
                                       :Point ;
                              :hasPoint_X 0 ;
@@ -3734,7 +3734,7 @@
                              :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_in_tray_pose
 :part_gasket_2_in_tray_pose rdf:type owl:NamedIndividual ,
                                      :Pose ;
                             :hasPose_Point :part_gasket_2_in_tray_point ;
@@ -3742,7 +3742,7 @@
                             :hasPose_ZAxis :part_gasket_2_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_in_tray_x_axis
 :part_gasket_2_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 1 ;
@@ -3750,7 +3750,7 @@
                               :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_in_tray_z_axis
 :part_gasket_2_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 0 ;
@@ -3758,14 +3758,14 @@
                               :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_location
 :part_gasket_2_location rdf:type owl:NamedIndividual ,
                                  :PoseLocationIn ;
                         :hasPhysicalLocation_RefObject :motoman_workstation ;
                         :hasPoseLocation_Pose :part_gasket_2_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_point
 :part_gasket_2_point rdf:type owl:NamedIndividual ,
                               :Point ;
                      :hasPoint_X 0 ;
@@ -3773,7 +3773,7 @@
                      :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_pose
 :part_gasket_2_pose rdf:type owl:NamedIndividual ,
                              :Pose ;
                     :hasPose_Point :part_gasket_2_point ;
@@ -3781,7 +3781,7 @@
                     :hasPose_ZAxis :part_gasket_2_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_x_axis
 :part_gasket_2_x_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 1 ;
@@ -3789,7 +3789,7 @@
                       :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_2_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_2_z_axis
 :part_gasket_2_z_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 0 ;
@@ -3797,7 +3797,7 @@
                       :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3
 :part_gasket_3 rdf:type owl:NamedIndividual ,
                         :Part ;
                :hasSkuObject_Sku :sku_gasket_part ;
@@ -3805,7 +3805,7 @@
                :hasPart_SerialNumber "3"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_in_tray_point
 :part_gasket_3_in_tray_point rdf:type owl:NamedIndividual ,
                                       :Point ;
                              :hasPoint_X 0 ;
@@ -3813,7 +3813,7 @@
                              :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_in_tray_pose
 :part_gasket_3_in_tray_pose rdf:type owl:NamedIndividual ,
                                      :Pose ;
                             :hasPose_Point :part_gasket_3_in_tray_point ;
@@ -3821,7 +3821,7 @@
                             :hasPose_ZAxis :part_gasket_3_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_in_tray_x_axis
 :part_gasket_3_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 1 ;
@@ -3829,7 +3829,7 @@
                               :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_in_tray_z_axis
 :part_gasket_3_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 0 ;
@@ -3837,14 +3837,14 @@
                               :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_location
 :part_gasket_3_location rdf:type owl:NamedIndividual ,
                                  :PoseLocationIn ;
                         :hasPhysicalLocation_RefObject :motoman_workstation ;
                         :hasPoseLocation_Pose :part_gasket_3_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_point
 :part_gasket_3_point rdf:type owl:NamedIndividual ,
                               :Point ;
                      :hasPoint_X 0 ;
@@ -3852,7 +3852,7 @@
                      :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_pose
 :part_gasket_3_pose rdf:type owl:NamedIndividual ,
                              :Pose ;
                     :hasPose_Point :part_gasket_3_point ;
@@ -3860,7 +3860,7 @@
                     :hasPose_ZAxis :part_gasket_3_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_x_axis
 :part_gasket_3_x_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 1 ;
@@ -3868,7 +3868,7 @@
                       :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_3_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_3_z_axis
 :part_gasket_3_z_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 0 ;
@@ -3876,7 +3876,7 @@
                       :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4
 :part_gasket_4 rdf:type owl:NamedIndividual ,
                         :Part ;
                :hasSkuObject_Sku :sku_gasket_part ;
@@ -3884,7 +3884,7 @@
                :hasPart_SerialNumber "4"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_in_tray_point
 :part_gasket_4_in_tray_point rdf:type owl:NamedIndividual ,
                                       :Point ;
                              :hasPoint_X 0 ;
@@ -3892,7 +3892,7 @@
                              :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_in_tray_pose
 :part_gasket_4_in_tray_pose rdf:type owl:NamedIndividual ,
                                      :Pose ;
                             :hasPose_Point :part_gasket_4_in_tray_point ;
@@ -3900,7 +3900,7 @@
                             :hasPose_ZAxis :part_gasket_4_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_in_tray_x_axis
 :part_gasket_4_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 1 ;
@@ -3908,7 +3908,7 @@
                               :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_in_tray_z_axis
 :part_gasket_4_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                        :Vector ;
                               :hasVector_I 0 ;
@@ -3916,14 +3916,14 @@
                               :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_location
 :part_gasket_4_location rdf:type owl:NamedIndividual ,
                                  :PoseLocationIn ;
                         :hasPhysicalLocation_RefObject :motoman_workstation ;
                         :hasPoseLocation_Pose :part_gasket_4_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_point
 :part_gasket_4_point rdf:type owl:NamedIndividual ,
                               :Point ;
                      :hasPoint_X 0 ;
@@ -3931,7 +3931,7 @@
                      :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_pose
 :part_gasket_4_pose rdf:type owl:NamedIndividual ,
                              :Pose ;
                     :hasPose_Point :part_gasket_4_point ;
@@ -3939,7 +3939,7 @@
                     :hasPose_ZAxis :part_gasket_4_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_x_axis
 :part_gasket_4_x_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 1 ;
@@ -3947,7 +3947,7 @@
                       :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gasket_4_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gasket_4_z_axis
 :part_gasket_4_z_axis rdf:type owl:NamedIndividual ,
                                :Vector ;
                       :hasVector_I 0 ;
@@ -3955,7 +3955,7 @@
                       :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1
 :part_gear_1 rdf:type owl:NamedIndividual ,
                       :Part ;
              :hasSkuObject_Sku :sku_gear_part ;
@@ -3963,7 +3963,7 @@
              :hasPart_SerialNumber "sn:1"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_in_tray_point
 :part_gear_1_in_tray_point rdf:type owl:NamedIndividual ,
                                     :Point ;
                            :hasPoint_X 0 ;
@@ -3971,7 +3971,7 @@
                            :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_in_tray_pose
 :part_gear_1_in_tray_pose rdf:type owl:NamedIndividual ,
                                    :Pose ;
                           :hasPose_Point :part_gear_1_in_tray_point ;
@@ -3979,7 +3979,7 @@
                           :hasPose_ZAxis :part_gear_1_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_in_tray_x_axis
 :part_gear_1_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 1 ;
@@ -3987,7 +3987,7 @@
                             :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_in_tray_z_axis
 :part_gear_1_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 0 ;
@@ -3995,14 +3995,14 @@
                             :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_location
 :part_gear_1_location rdf:type owl:NamedIndividual ,
                                :PoseLocationIn ;
                       :hasPhysicalLocation_RefObject :motoman_workstation ;
                       :hasPoseLocation_Pose :part_gear_1_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_point
 :part_gear_1_point rdf:type owl:NamedIndividual ,
                             :Point ;
                    :hasPoint_X 0 ;
@@ -4010,7 +4010,7 @@
                    :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_pose
 :part_gear_1_pose rdf:type owl:NamedIndividual ,
                            :Pose ;
                   :hasPose_Point :part_gear_1_point ;
@@ -4018,7 +4018,7 @@
                   :hasPose_ZAxis :part_gear_1_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_x_axis
 :part_gear_1_x_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 1 ;
@@ -4026,7 +4026,7 @@
                     :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_1_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_1_z_axis
 :part_gear_1_z_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 0 ;
@@ -4034,7 +4034,7 @@
                     :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2
 :part_gear_2 rdf:type owl:NamedIndividual ,
                       :Part ;
              :hasSkuObject_Sku :sku_gear_part ;
@@ -4042,7 +4042,7 @@
              :hasPart_SerialNumber "sn:2"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_in_tray_point
 :part_gear_2_in_tray_point rdf:type owl:NamedIndividual ,
                                     :Point ;
                            :hasPoint_X 0 ;
@@ -4050,7 +4050,7 @@
                            :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_in_tray_pose
 :part_gear_2_in_tray_pose rdf:type owl:NamedIndividual ,
                                    :Pose ;
                           :hasPose_Point :part_gear_2_in_tray_point ;
@@ -4058,7 +4058,7 @@
                           :hasPose_ZAxis :part_gear_1_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_in_tray_x_axis
 :part_gear_2_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 1 ;
@@ -4066,7 +4066,7 @@
                             :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_in_tray_z_axis
 :part_gear_2_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 0 ;
@@ -4074,14 +4074,14 @@
                             :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_location
 :part_gear_2_location rdf:type owl:NamedIndividual ,
                                :PoseLocationIn ;
                       :hasPhysicalLocation_RefObject :motoman_workstation ;
                       :hasPoseLocation_Pose :part_gear_2_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_point
 :part_gear_2_point rdf:type owl:NamedIndividual ,
                             :Point ;
                    :hasPoint_X 0 ;
@@ -4089,7 +4089,7 @@
                    :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_pose
 :part_gear_2_pose rdf:type owl:NamedIndividual ,
                            :Pose ;
                   :hasPose_Point :part_gear_2_point ;
@@ -4097,7 +4097,7 @@
                   :hasPose_ZAxis :part_gear_2_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_x_axis
 :part_gear_2_x_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 1 ;
@@ -4105,7 +4105,7 @@
                     :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_2_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_2_z_axis
 :part_gear_2_z_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 0 ;
@@ -4113,7 +4113,7 @@
                     :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3
 :part_gear_3 rdf:type owl:NamedIndividual ,
                       :Part ;
              :hasSkuObject_Sku :sku_gear_part ;
@@ -4121,7 +4121,7 @@
              :hasPart_SerialNumber "sn:3"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_in_tray_point
 :part_gear_3_in_tray_point rdf:type owl:NamedIndividual ,
                                     :Point ;
                            :hasPoint_X 0 ;
@@ -4129,7 +4129,7 @@
                            :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_in_tray_pose
 :part_gear_3_in_tray_pose rdf:type owl:NamedIndividual ,
                                    :Pose ;
                           :hasPose_Point :part_gear_3_in_tray_point ;
@@ -4137,7 +4137,7 @@
                           :hasPose_ZAxis :part_gear_3_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_in_tray_x_axis
 :part_gear_3_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 1 ;
@@ -4145,7 +4145,7 @@
                             :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_in_tray_z_axis
 :part_gear_3_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 0 ;
@@ -4153,14 +4153,14 @@
                             :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_location
 :part_gear_3_location rdf:type owl:NamedIndividual ,
                                :PoseLocationIn ;
                       :hasPhysicalLocation_RefObject :motoman_workstation ;
                       :hasPoseLocation_Pose :part_gear_3_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_point
 :part_gear_3_point rdf:type owl:NamedIndividual ,
                             :Point ;
                    :hasPoint_X 0 ;
@@ -4168,7 +4168,7 @@
                    :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_pose
 :part_gear_3_pose rdf:type owl:NamedIndividual ,
                            :Pose ;
                   :hasPose_Point :part_gear_3_point ;
@@ -4176,7 +4176,7 @@
                   :hasPose_ZAxis :part_gear_3_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_x_axis
 :part_gear_3_x_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 1 ;
@@ -4184,7 +4184,7 @@
                     :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_3_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_3_z_axis
 :part_gear_3_z_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 0 ;
@@ -4192,7 +4192,7 @@
                     :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4
 :part_gear_4 rdf:type owl:NamedIndividual ,
                       :Part ;
              :hasSkuObject_Sku :sku_gear_part ;
@@ -4200,7 +4200,7 @@
              :hasPart_SerialNumber "sn:4"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_in_tray_point
 :part_gear_4_in_tray_point rdf:type owl:NamedIndividual ,
                                     :Point ;
                            :hasPoint_X 0 ;
@@ -4208,7 +4208,7 @@
                            :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_in_tray_pose
 :part_gear_4_in_tray_pose rdf:type owl:NamedIndividual ,
                                    :Pose ;
                           :hasPose_Point :part_gear_4_in_tray_point ;
@@ -4216,7 +4216,7 @@
                           :hasPose_ZAxis :part_gear_4_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_in_tray_x_axis
 :part_gear_4_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 1 ;
@@ -4224,7 +4224,7 @@
                             :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_in_tray_z_axis
 :part_gear_4_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                      :Vector ;
                             :hasVector_I 0 ;
@@ -4232,14 +4232,14 @@
                             :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_location
 :part_gear_4_location rdf:type owl:NamedIndividual ,
                                :PoseLocationIn ;
                       :hasPhysicalLocation_RefObject :motoman_workstation ;
                       :hasPoseLocation_Pose :part_gear_4_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_point
 :part_gear_4_point rdf:type owl:NamedIndividual ,
                             :Point ;
                    :hasPoint_X 0 ;
@@ -4247,7 +4247,7 @@
                    :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_pose
 :part_gear_4_pose rdf:type owl:NamedIndividual ,
                            :Pose ;
                   :hasPose_Point :part_gear_4_point ;
@@ -4255,7 +4255,7 @@
                   :hasPose_ZAxis :part_gear_4_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_x_axis
 :part_gear_4_x_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 1 ;
@@ -4263,7 +4263,7 @@
                     :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_gear_4_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_gear_4_z_axis
 :part_gear_4_z_axis rdf:type owl:NamedIndividual ,
                              :Vector ;
                     :hasVector_I 0 ;
@@ -4271,14 +4271,14 @@
                     :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_in_tray_tolerance
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_in_tray_tolerance
 :part_in_tray_tolerance rdf:type owl:NamedIndividual ,
                                  :PoseTolerance ;
                         :hasPoseTolerance_XPointTolerance 0.005 ;
                         :hasPoseTolerance_YPointTolerance 0.005 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1
 :part_piston_rod_1 rdf:type owl:NamedIndividual ,
                             :Part ;
                    :hasSkuObject_Sku :sku_piston_rod_part ;
@@ -4286,7 +4286,7 @@
                    :hasPart_SerialNumber "sn:1"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_in_tray_point
 :part_piston_rod_1_in_tray_point rdf:type owl:NamedIndividual ,
                                           :Point ;
                                  :hasPoint_X 0 ;
@@ -4294,7 +4294,7 @@
                                  :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_in_tray_pose
 :part_piston_rod_1_in_tray_pose rdf:type owl:NamedIndividual ,
                                          :Pose ;
                                 :hasPose_Point :part_piston_rod_1_in_tray_point ;
@@ -4302,7 +4302,7 @@
                                 :hasPose_ZAxis :part_piston_rod_1_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_in_tray_x_axis
 :part_piston_rod_1_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 1 ;
@@ -4310,7 +4310,7 @@
                                   :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_in_tray_z_axis
 :part_piston_rod_1_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 0 ;
@@ -4318,14 +4318,14 @@
                                   :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_location
 :part_piston_rod_1_location rdf:type owl:NamedIndividual ,
                                      :PoseLocationIn ;
                             :hasPhysicalLocation_RefObject :motoman_workstation ;
                             :hasPoseLocation_Pose :part_piston_rod_1_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_point
 :part_piston_rod_1_point rdf:type owl:NamedIndividual ,
                                   :Point ;
                          :hasPoint_X 0 ;
@@ -4333,7 +4333,7 @@
                          :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_pose
 :part_piston_rod_1_pose rdf:type owl:NamedIndividual ,
                                  :Pose ;
                         :hasPose_Point :part_piston_rod_1_point ;
@@ -4341,7 +4341,7 @@
                         :hasPose_ZAxis :part_piston_rod_1_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_x_axis
 :part_piston_rod_1_x_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 1 ;
@@ -4349,7 +4349,7 @@
                           :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_1_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_1_z_axis
 :part_piston_rod_1_z_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 0 ;
@@ -4357,7 +4357,7 @@
                           :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2
 :part_piston_rod_2 rdf:type owl:NamedIndividual ,
                             :Part ;
                    :hasSkuObject_Sku :sku_piston_rod_part ;
@@ -4365,7 +4365,7 @@
                    :hasPart_SerialNumber "sn:2"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_in_tray_point
 :part_piston_rod_2_in_tray_point rdf:type owl:NamedIndividual ,
                                           :Point ;
                                  :hasPoint_X 0 ;
@@ -4373,7 +4373,7 @@
                                  :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_in_tray_pose
 :part_piston_rod_2_in_tray_pose rdf:type owl:NamedIndividual ,
                                          :Pose ;
                                 :hasPose_Point :part_piston_rod_2_in_tray_point ;
@@ -4381,7 +4381,7 @@
                                 :hasPose_ZAxis :part_piston_rod_2_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_in_tray_x_axis
 :part_piston_rod_2_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 1 ;
@@ -4389,7 +4389,7 @@
                                   :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_in_tray_z_axis
 :part_piston_rod_2_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 0 ;
@@ -4397,14 +4397,14 @@
                                   :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_location
 :part_piston_rod_2_location rdf:type owl:NamedIndividual ,
                                      :PoseLocationIn ;
                             :hasPhysicalLocation_RefObject :motoman_workstation ;
                             :hasPoseLocation_Pose :part_piston_rod_2_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_point
 :part_piston_rod_2_point rdf:type owl:NamedIndividual ,
                                   :Point ;
                          :hasPoint_X 0 ;
@@ -4412,7 +4412,7 @@
                          :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_pose
 :part_piston_rod_2_pose rdf:type owl:NamedIndividual ,
                                  :Pose ;
                         :hasPose_Point :part_piston_rod_2_point ;
@@ -4420,7 +4420,7 @@
                         :hasPose_ZAxis :part_piston_rod_2_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_x_axis
 :part_piston_rod_2_x_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 1 ;
@@ -4428,7 +4428,7 @@
                           :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_2_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_2_z_axis
 :part_piston_rod_2_z_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 0 ;
@@ -4436,7 +4436,7 @@
                           :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3
 :part_piston_rod_3 rdf:type owl:NamedIndividual ,
                             :Part ;
                    :hasSkuObject_Sku :sku_piston_rod_part ;
@@ -4444,7 +4444,7 @@
                    :hasPart_SerialNumber "sn:3"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_in_tray_point
 :part_piston_rod_3_in_tray_point rdf:type owl:NamedIndividual ,
                                           :Point ;
                                  :hasPoint_X 0 ;
@@ -4452,7 +4452,7 @@
                                  :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_in_tray_pose
 :part_piston_rod_3_in_tray_pose rdf:type owl:NamedIndividual ,
                                          :Pose ;
                                 :hasPose_Point :part_piston_rod_3_in_tray_point ;
@@ -4460,7 +4460,7 @@
                                 :hasPose_ZAxis :part_piston_rod_3_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_in_tray_x_axis
 :part_piston_rod_3_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 1 ;
@@ -4468,7 +4468,7 @@
                                   :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_in_tray_z_axis
 :part_piston_rod_3_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 0 ;
@@ -4476,14 +4476,14 @@
                                   :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_location
 :part_piston_rod_3_location rdf:type owl:NamedIndividual ,
                                      :PoseLocationIn ;
                             :hasPhysicalLocation_RefObject :motoman_workstation ;
                             :hasPoseLocation_Pose :part_piston_rod_3_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_point
 :part_piston_rod_3_point rdf:type owl:NamedIndividual ,
                                   :Point ;
                          :hasPoint_X 0 ;
@@ -4491,7 +4491,7 @@
                          :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_pose
 :part_piston_rod_3_pose rdf:type owl:NamedIndividual ,
                                  :Pose ;
                         :hasPose_Point :part_piston_rod_3_point ;
@@ -4499,7 +4499,7 @@
                         :hasPose_ZAxis :part_piston_rod_3_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_x_axis
 :part_piston_rod_3_x_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 1 ;
@@ -4507,7 +4507,7 @@
                           :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_3_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_3_z_axis
 :part_piston_rod_3_z_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 0 ;
@@ -4515,7 +4515,7 @@
                           :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4
 :part_piston_rod_4 rdf:type owl:NamedIndividual ,
                             :Part ;
                    :hasSkuObject_Sku :sku_piston_rod_part ;
@@ -4523,7 +4523,7 @@
                    :hasPart_SerialNumber "sn:4"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_in_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_in_tray_point
 :part_piston_rod_4_in_tray_point rdf:type owl:NamedIndividual ,
                                           :Point ;
                                  :hasPoint_X 0 ;
@@ -4531,7 +4531,7 @@
                                  :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_in_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_in_tray_pose
 :part_piston_rod_4_in_tray_pose rdf:type owl:NamedIndividual ,
                                          :Pose ;
                                 :hasPose_Point :part_piston_rod_4_in_tray_point ;
@@ -4539,7 +4539,7 @@
                                 :hasPose_ZAxis :part_piston_rod_4_in_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_in_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_in_tray_x_axis
 :part_piston_rod_4_in_tray_x_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 1 ;
@@ -4547,7 +4547,7 @@
                                   :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_in_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_in_tray_z_axis
 :part_piston_rod_4_in_tray_z_axis rdf:type owl:NamedIndividual ,
                                            :Vector ;
                                   :hasVector_I 0 ;
@@ -4555,14 +4555,14 @@
                                   :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_location
 :part_piston_rod_4_location rdf:type owl:NamedIndividual ,
                                      :PoseLocationIn ;
                             :hasPhysicalLocation_RefObject :motoman_workstation ;
                             :hasPoseLocation_Pose :part_piston_rod_4_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_point
 :part_piston_rod_4_point rdf:type owl:NamedIndividual ,
                                   :Point ;
                          :hasPoint_X 0 ;
@@ -4570,7 +4570,7 @@
                          :hasPoint_Z 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_pose
 :part_piston_rod_4_pose rdf:type owl:NamedIndividual ,
                                  :Pose ;
                         :hasPose_Point :part_piston_rod_4_point ;
@@ -4578,7 +4578,7 @@
                         :hasPose_ZAxis :part_piston_rod_4_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_x_axis
 :part_piston_rod_4_x_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 1 ;
@@ -4586,7 +4586,7 @@
                           :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#part_piston_rod_4_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#part_piston_rod_4_z_axis
 :part_piston_rod_4_z_axis rdf:type owl:NamedIndividual ,
                                    :Vector ;
                           :hasVector_I 0 ;
@@ -4594,7 +4594,7 @@
                           :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_part_shape
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_part_shape
 :piston_rod_part_shape rdf:type owl:NamedIndividual ,
                                 :ExternalShape ;
                        :hasExternalShape_ModelFileName "piston_rod_part"^^xsd:string ;
@@ -4602,7 +4602,7 @@
                        :hasShapeDesign_Description "shape of piston rod parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray
 :piston_rod_tray rdf:type owl:NamedIndividual ,
                           :PartsTray ;
                  :hasPartsTray_Design :design_piston_rod_tray ;
@@ -4612,14 +4612,14 @@
                  :hasPartsVessel_SerialNumber "PistonRodTray"^^xsd:NMTOKEN .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_location
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_location
 :piston_rod_tray_location rdf:type owl:NamedIndividual ,
                                    :PoseLocationOn ;
                           :hasPhysicalLocation_RefObject :optical_table ;
                           :hasPoseLocation_Pose :piston_rod_tray_pose .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_point
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_point
 :piston_rod_tray_point rdf:type owl:NamedIndividual ,
                                 :Point ;
                        :hasPoint_X 0.0 ;
@@ -4627,7 +4627,7 @@
                        :hasPoint_Z 0.0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_pose
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_pose
 :piston_rod_tray_pose rdf:type owl:NamedIndividual ,
                                :Pose ;
                       :hasPose_Point :piston_rod_tray_point ;
@@ -4635,7 +4635,7 @@
                       :hasPose_ZAxis :piston_rod_tray_z_axis .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_shape
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_shape
 :piston_rod_tray_shape rdf:type owl:NamedIndividual ,
                                 :BoxyShape ;
                        :hasBoxyShape_HasTop "false"^^xsd:boolean ;
@@ -4645,7 +4645,7 @@
                        :hasShapeDesign_Description "Shape for trays that hold piston rod parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_slot_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_slot_1
 :piston_rod_tray_slot_1 rdf:type owl:NamedIndividual ,
                                  :Slot ;
                         :hasSlot_Part :part_piston_rod_1 ;
@@ -4654,7 +4654,7 @@
                         :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_slot_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_slot_2
 :piston_rod_tray_slot_2 rdf:type owl:NamedIndividual ,
                                  :Slot ;
                         :hasSlot_Part :part_piston_rod_2 ;
@@ -4663,7 +4663,7 @@
                         :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_slot_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_slot_3
 :piston_rod_tray_slot_3 rdf:type owl:NamedIndividual ,
                                  :Slot ;
                         :hasSlot_Part :part_piston_rod_3 ;
@@ -4672,7 +4672,7 @@
                         :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_slot_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_slot_4
 :piston_rod_tray_slot_4 rdf:type owl:NamedIndividual ,
                                  :Slot ;
                         :hasSlot_Part :part_piston_rod_4 ;
@@ -4681,7 +4681,7 @@
                         :hasSlot_IsOccupied "true"^^xsd:boolean .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_x_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_x_axis
 :piston_rod_tray_x_axis rdf:type owl:NamedIndividual ,
                                  :Vector ;
                         :hasVector_I 1 ;
@@ -4689,7 +4689,7 @@
                         :hasVector_K 0 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#piston_rod_tray_z_axis
+###  http://www.nist.gov/el/ontologies/kitting.owl#piston_rod_tray_z_axis
 :piston_rod_tray_z_axis rdf:type owl:NamedIndividual ,
                                  :Vector ;
                         :hasVector_I 0 ;
@@ -4697,134 +4697,134 @@
                         :hasVector_K 1 .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gasket_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gasket_1
 :prap_gasket_1 rdf:type owl:NamedIndividual ,
                         :PartRefAndPose ;
                :hasPartRefAndPose_Pose :part_gasket_1_in_tray_pose ;
                :hasPartRefAndPose_Sku :sku_gasket_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gasket_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gasket_2
 :prap_gasket_2 rdf:type owl:NamedIndividual ,
                         :PartRefAndPose ;
                :hasPartRefAndPose_Pose :part_gasket_2_in_tray_pose ;
                :hasPartRefAndPose_Sku :sku_gasket_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gasket_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gasket_3
 :prap_gasket_3 rdf:type owl:NamedIndividual ,
                         :PartRefAndPose ;
                :hasPartRefAndPose_Pose :part_gasket_3_in_tray_pose ;
                :hasPartRefAndPose_Sku :sku_gasket_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gasket_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gasket_4
 :prap_gasket_4 rdf:type owl:NamedIndividual ,
                         :PartRefAndPose ;
                :hasPartRefAndPose_Pose :part_gasket_4_in_tray_pose ;
                :hasPartRefAndPose_Sku :sku_gear_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gear_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gear_1
 :prap_gear_1 rdf:type owl:NamedIndividual ,
                       :PartRefAndPose ;
              :hasPartRefAndPose_Pose :part_gear_1_in_tray_pose ;
              :hasPartRefAndPose_Sku :sku_gear_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gear_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gear_2
 :prap_gear_2 rdf:type owl:NamedIndividual ,
                       :PartRefAndPose ;
              :hasPartRefAndPose_Pose :part_gear_2_in_tray_pose ;
              :hasPartRefAndPose_Sku :sku_gear_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gear_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gear_3
 :prap_gear_3 rdf:type owl:NamedIndividual ,
                       :PartRefAndPose ;
              :hasPartRefAndPose_Pose :part_gear_3_in_tray_pose ;
              :hasPartRefAndPose_Sku :sku_gear_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_gear_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_gear_4
 :prap_gear_4 rdf:type owl:NamedIndividual ,
                       :PartRefAndPose ;
              :hasPartRefAndPose_Pose :part_gear_4_in_tray_pose ;
              :hasPartRefAndPose_Sku :sku_gear_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_piston_rod_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_piston_rod_1
 :prap_piston_rod_1 rdf:type owl:NamedIndividual ,
                             :PartRefAndPose ;
                    :hasPartRefAndPose_Pose :part_piston_rod_1_in_tray_pose ;
                    :hasPartRefAndPose_Sku :sku_piston_rod_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_piston_rod_2
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_piston_rod_2
 :prap_piston_rod_2 rdf:type owl:NamedIndividual ,
                             :PartRefAndPose ;
                    :hasPartRefAndPose_Pose :part_piston_rod_2_in_tray_pose ;
                    :hasPartRefAndPose_Sku :sku_piston_rod_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_piston_rod_3
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_piston_rod_3
 :prap_piston_rod_3 rdf:type owl:NamedIndividual ,
                             :PartRefAndPose ;
                    :hasPartRefAndPose_Pose :part_piston_rod_3_in_tray_pose ;
                    :hasPartRefAndPose_Sku :sku_piston_rod_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#prap_piston_rod_4
+###  http://www.nist.gov/el/ontologies/kitting.owl#prap_piston_rod_4
 :prap_piston_rod_4 rdf:type owl:NamedIndividual ,
                             :PartRefAndPose ;
                    :hasPartRefAndPose_Pose :part_piston_rod_4_in_tray_pose ;
                    :hasPartRefAndPose_Sku :sku_piston_rod_part .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#relative_location_in_1
+###  http://www.nist.gov/el/ontologies/kitting.owl#relative_location_in_1
 :relative_location_in_1 rdf:type owl:NamedIndividual ,
                                  :RelativeLocationIn ;
                         :hasPhysicalLocation_RefObject :motoman_workstation ;
                         :hasRelativeLocationIn_Description "The  KittingWorkstation is in motoman_workstation"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#sku_gasket_part
+###  http://www.nist.gov/el/ontologies/kitting.owl#sku_gasket_part
 :sku_gasket_part rdf:type owl:NamedIndividual ,
                           :StockKeepingUnit ;
                  :hasStockKeepingUnit_Description "SKU for gasket type parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#sku_gasket_vessel
+###  http://www.nist.gov/el/ontologies/kitting.owl#sku_gasket_vessel
 :sku_gasket_vessel rdf:type owl:NamedIndividual ,
                             :StockKeepingUnit ;
                    :hasStockKeepingUnit_Description "Stock keeping unit for trays that hold gasket parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#sku_gear_part
+###  http://www.nist.gov/el/ontologies/kitting.owl#sku_gear_part
 :sku_gear_part rdf:type owl:NamedIndividual ,
                         :StockKeepingUnit ;
                :hasStockKeepingUnit_Description "SKU for gear type parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#sku_gear_vessel
+###  http://www.nist.gov/el/ontologies/kitting.owl#sku_gear_vessel
 :sku_gear_vessel rdf:type owl:NamedIndividual ,
                           :StockKeepingUnit ;
                  :hasStockKeepingUnit_Description "Stock keeping unit for trays that hold gear parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#sku_kit_vessel
+###  http://www.nist.gov/el/ontologies/kitting.owl#sku_kit_vessel
 :sku_kit_vessel rdf:type owl:NamedIndividual ,
                          :StockKeepingUnit ;
                 :hasStockKeepingUnit_Description "Stock keeping unit for trays that are specifically used to build kits"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#sku_piston_rod_part
+###  http://www.nist.gov/el/ontologies/kitting.owl#sku_piston_rod_part
 :sku_piston_rod_part rdf:type owl:NamedIndividual ,
                               :StockKeepingUnit ;
                      :hasStockKeepingUnit_Description "SKU for piston rod type parts"^^xsd:string .
 
 
-###  http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#sku_piston_rod_vessel
+###  http://www.nist.gov/el/ontologies/kitting.owl#sku_piston_rod_vessel
 :sku_piston_rod_vessel rdf:type owl:NamedIndividual ,
                                 :StockKeepingUnit ;
                        :hasStockKeepingUnit_Description "Stock keeping unit for trays that hold piston rod parts"^^xsd:string .

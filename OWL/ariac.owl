@@ -1,4 +1,4 @@
-Prefix(:=<http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl#>)
+Prefix(:=<http://www.nist.gov/el/ontologies/kitting.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,7 +6,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://www.nist.gov/el/ontologies/DemoKittingWorkstationClasses.owl>
+Ontology(<http://www.nist.gov/el/ontologies/kitting.owl>
 Annotation(rdfs:comment "This kitting ontology models a kitting workstation including objects
   in the workstation and data associated with the workstation. The
   ontology assumes coordinate systems are right handed. For objects
