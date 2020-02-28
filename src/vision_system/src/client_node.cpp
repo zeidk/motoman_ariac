@@ -137,24 +137,52 @@ string tcp_client::receive(int size = 512)
 
 int main(int argc, char* argv[])
 {
+
+    int param;
+    ros::init(argc, argv, "vision_system_name");
+    ros::NodeHandle nh("~");
+    nh.getParam("param", param);
+    ROS_INFO("Got parameter : %d", param);
+
     tcp_client c;
     string host;
 
     //cout << "Enter hostname : ";
     //cin >> host;
-    host = "agility.el.nist.gov";
-    int port = 5002;
+    //host = "agility.el.nist.gov";
+    //int port = 5002;
+
+    //-- connection to the gripper
+    host = "optimus.el.nist.gov";
+    int port = 1234;
 
     // connect to host
     c.conn(host, port);
 
     // send some data
-    c.send_data("GET / HTTP/1.1\r\n\r\n");
+    //c.send_data("GET / HTTP/1.1\r\n\r\n");
+    //c.send_data("1");
+
+    if(param == 1)
+        {
+          //cout << check << endl;
+          c.send_data("1");
+          //blue();
+        }
+         else if(param == 0)
+        {
+          //cout << check << endl;
+          c.send_data("0");
+        }
+        else
+        {
+          cout << "Wrong parameter to control the gripper!!! " << endl;
+        }  
 
     // receive and echo reply
-    cout << "----------------------------\n\n";
-    cout << c.receive(2560);
-    cout << "\n\n----------------------------\n\n";
+    //cout << "----------------------------\n\n";
+    //cout << c.receive(2560);
+    //cout << "\n\n----------------------------\n\n";
 
     // done
     return 0;

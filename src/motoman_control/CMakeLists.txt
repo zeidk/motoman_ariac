@@ -11,6 +11,10 @@ if(NOT EIGEN3_INCLUDE_DIRS)
   set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
 endif()
 
+set(PROJECT_NAME_INCLUDE_DIRS include/motoman_control)
+set(MOTOMAN_NAME_INCLUDE_DIRS ../src/motoman)
+set(PROJECT_HEADER_FILES ${PROJECT_NAME_INCLUDE_DIRS}/utils.h ${PROJECT_NAME_INCLUDE_DIRS}/socket_node.h ${PROJECT_NAME_INCLUDE_DIRS}/motoman_control_node.h)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -23,7 +27,10 @@ find_package(catkin REQUIRED
     moveit_visual_tools
     moveit_ros_planning
     moveit_ros_planning_interface
+    motoman_driver
+    motoman_msgs
     pluginlib
+    actionlib
     geometric_shapes
     pcl_ros
     pcl_conversions
@@ -143,9 +150,9 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-  ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${EIGEN3_INCLUDE_DIRS}
+  ${PROJECT_NAME_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${EIGEN3_INCLUDE_DIRS}
 )
-
+  
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/vision_system.cpp
@@ -159,7 +166,9 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME}_node src/motoman_control_node.cpp)
+
+set(SOURCES src/motoman_control_node.cpp ${PROJECT_HEADER_FILES})
+add_executable(${PROJECT_NAME}_node ${SOURCES})
 add_dependencies(${PROJECT_NAME}_node ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
