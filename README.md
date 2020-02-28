@@ -1,9 +1,7 @@
 # motoman_ariac
 
-'rosrun motoman_driver move_to_joint.py "[-1.681924819946289, 0.8290144205093384, -0.06884165108203888, -1.1282429695129395, -0.042419884353876114, -1.1490578651428223, 1.734451174736023]" 1.0'
-'rosrun motoman_driver move_to_joint.py "[-1.6852654218673706, 0.9386770129203796, -0.0646146833896637, -1.1795631647109985, -0.04769009351730347, -0.9882936477661133, 1.7380003929138184]" 1.0'
 
-'rosrun motoman_driver move_to_joint.py "[-2.2724905014038086, 1.0080640316009521, -0.0392528660595417, -0.9507613182067871, -0.04671806842088699, -1.1460354328155518, 2.3013322353363037]" 1.0'
+## Opening and Closing Gripper
 
-'rosrun motoman_control motoman_control_node _param:=c'
-'rosrun motoman_control motoman_control_node _param:=o'
+`rosrun motoman_control motoman_control_node _param:=c`
+`rosrun motoman_control motoman_control_node _param:=o`
